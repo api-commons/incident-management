@@ -86,3 +86,11 @@ decisions:
     incident."
   - "Status-page components are services: the thing customers see as up or down."
   - "Schedules, on-calls and rotations are one concept, `on_call_schedule`."
+
+workflows:
+  - id: declare-and-update
+    summary: Declare an incident against a service and post a status update
+    steps:
+      - {op: getService, id: service, path: {"{service_id}": "$inputs.service_id"}}
+      - {op: createIncident, id: incident, link: {service_id: "$steps.service.outputs.id"}}
+      - {op: createIncidentUpdate, id: update, path: {"{incident_id}": "$steps.incident.outputs.id"}}

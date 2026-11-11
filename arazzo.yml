@@ -1,0 +1,59 @@
+arazzo: 1.0.1
+info:
+  title: Incident Management workflows (API Commons)
+  version: 0.1.0-draft.20261111
+  summary: Reference workflows over the common Incident Management operations.
+  description: 'Reference compositions of the operations this context''s providers share. Not measured: every step
+    is a core- or extended-tier operation of the common OpenAPI, so the workflow runs against any provider that
+    implements those operations (see crosswalk/).'
+sourceDescriptions:
+- name: incident-management
+  url: ./openapi.yml
+  type: openapi
+workflows:
+- workflowId: declare-and-update
+  summary: Declare an incident against a service and post a status update
+  description: Declare an incident against a service and post a status update.
+  inputs:
+    type: object
+    required:
+    - service_id
+    properties:
+      service_id:
+        type: string
+  steps:
+  - stepId: service
+    operationId: getService
+    description: Get a service -- a core-tier operation (91% of providers).
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      id: $response.body#/id
+    parameters:
+    - name: service_id
+      in: path
+      value: $inputs.service_id
+  - stepId: incident
+    operationId: createIncident
+    description: Create an incident -- a core-tier operation (63% of providers).
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      id: $response.body#/id
+    requestBody:
+      contentType: application/json
+      payload:
+        service_id: $steps.service.outputs.id
+  - stepId: update
+    operationId: createIncidentUpdate
+    description: Create an incident update -- a core-tier operation (70% of providers).
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      id: $response.body#/id
+    parameters:
+    - name: incident_id
+      in: path
+      value: $steps.incident.outputs.id
+  x-commons-tiers:
+  - core

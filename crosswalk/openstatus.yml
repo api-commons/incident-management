@@ -1,7 +1,7 @@
 provider: openstatus
 apis_io: https://apis.io/providers/openstatus/
 context: incident-management
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   incident:
     path_segment:
