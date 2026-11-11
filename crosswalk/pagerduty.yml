@@ -79,11 +79,11 @@ concepts:
       layers:
       - schedule_layers
       - final_schedule
+      type: type
+      users: users
       escalation_policy: escalation_policy
       start: start
-      type: type
       user: user
-      users: users
     core_coverage: 0.6
     evidence:
     - openapi/_original/pagerduty-openapi-original.yml#DELETE /schedules/{id}
@@ -96,8 +96,8 @@ concepts:
     - escalation_policies
     properties:
       name: name
-      description: description
       id: escalation_policy_id
+      description: description
       rules: escalation_rules
       team_id:
       - team_id

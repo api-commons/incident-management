@@ -10,6 +10,16 @@ generated. Every number below is a count of providers.
 ## What the market already agrees on
 
 <!-- commons:summary -->
+| Concept | Expose it | Readable schema | Core properties (share) | Collection named |
+| --- | ---: | ---: | --- | --- |
+| incident | 27 | 24 | id 88%, name 71%, severity 71%, status 71%, created_at 58% | incidents 24, incident 6 |
+| incident_update | 10 | 7 | created_at 86%, id 86%, body 57% | updates 3, events 3, notes 2, incident_updates 2 |
+| service | 11 | 10 | name 100%, description 80%, id 70%, created_at 50% | services 8, components 3, service 1, business_services 1 |
+| on_call_schedule | 11 | 11 | name 91%, id 82%, description 64%, time_zone 64%, created_at 55% | schedules 10, on-calls 2, oncalls 1, oncall 1 |
+| escalation_policy | 7 | 7 | name 100%, id 71%, description 57%, rules 57% | escalation_policies 3, escalations 3, escalation-policies 1 |
+| status_page | 10 | 10 | name 80%, id 70%, subdomain 60% | status-pages 5, status_pages 3, statuspages 2, pages 1 |
+
+Cohort: 75 providers with harvested OpenAPI, 28 crosswalks. Of the providers exposing a incident: 63% create, 78% list, 82% fetch, 44% update, 41% delete. Generated 2026-11-10 by build.py.
 <!-- /commons:summary -->
 
 Shares are of the providers with a readable resource schema for that concept. The

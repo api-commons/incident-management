@@ -197,7 +197,7 @@ concepts:
       - startedAt
       - started_at
       - start_time
-    long_tail_count: 410
+    long_tail_count: 408
     long_tail_sample:
     - team_id
     - duration
@@ -317,7 +317,7 @@ concepts:
       type: string
       spellings:
       - type
-    long_tail_count: 60
+    long_tail_count: 59
     long_tail_sample:
     - author_id
     - context
@@ -353,12 +353,12 @@ concepts:
     - observed_time
     - occurred_at
     - original
-    - pagination_meta
     - public_incident_update_date
     - published_at
     - relations
     - resolution
     - revision
+    - sensor
   service:
     segments_seen:
       services: 8
@@ -451,7 +451,7 @@ concepts:
       spellings:
       - updated_at
       - updatedAt
-    long_tail_count: 159
+    long_tail_count: 160
     long_tail_sample:
     - acknowledgement_timeout
     - auto_resolve_timeout
@@ -593,6 +593,21 @@ concepts:
       - scheduleLayers
       - schedule_layers
       - final_schedule
+    - name: type
+      tier: extended
+      providers: 4
+      share: 0.364
+      type: string
+      spellings:
+      - type
+    - name: users
+      tier: extended
+      providers: 4
+      share: 0.364
+      type: array
+      spellings:
+      - users
+      - participants
     - name: escalation_policy
       tier: extended
       providers: 3
@@ -608,13 +623,6 @@ concepts:
       type: string
       spellings:
       - start
-    - name: type
-      tier: extended
-      providers: 3
-      share: 0.273
-      type: string
-      spellings:
-      - type
     - name: updated_at
       tier: extended
       providers: 3
@@ -631,14 +639,7 @@ concepts:
       type: object
       spellings:
       - user
-    - name: users
-      tier: extended
-      providers: 3
-      share: 0.273
-      type: array
-      spellings:
-      - users
-    long_tail_count: 61
+    long_tail_count: 68
     long_tail_sample:
     - enabled
     - end
@@ -657,16 +658,21 @@ concepts:
     - current_shifts
     - default_shift_duration
     - discarded
+    - email
+    - end_date
     - escalation_policies
     - failure_flag_targets
+    - first_name
     - handoff
     - holidays_public_config
     - initial_next_fire_time
     - integration
     - last_fired_result
     - last_fired_time
+    - last_name
     - last_updated
     - last_updated_by
+    - length
     - metadata
     - next_fired_time
     - next_shift
@@ -675,11 +681,6 @@ concepts:
     - on_call
     - org_id
     - overrides
-    - overrides_subschedule
-    - owner
-    - owner_team
-    - pagination_meta
-    - permalink
   escalation_policy:
     segments_seen:
       escalation_policies: 3
@@ -718,13 +719,6 @@ concepts:
       - name
       - title
       - summary
-    - name: description
-      tier: core
-      providers: 5
-      share: 0.714
-      type: string
-      spellings:
-      - description
     - name: id
       tier: core
       providers: 5
@@ -735,16 +729,23 @@ concepts:
       - incident_id
       - escalation_policy_id
       - _id
+    - name: description
+      tier: core
+      providers: 4
+      share: 0.571
+      type: string
+      spellings:
+      - description
     - name: rules
       tier: core
-      providers: 5
-      share: 0.714
+      providers: 4
+      share: 0.571
       type: array
       spellings:
-      - rules
       - steps
       - escalationRules
       - escalation_rules
+      - rules
     - name: team_id
       tier: extended
       providers: 3
@@ -754,14 +755,14 @@ concepts:
       - teams
       - team_id
       - team
-    long_tail_count: 66
+    long_tail_count: 67
     long_tail_sample:
     - created_at
-    - repeat
+    - delay
     - aggregate_unit
+    - condition
     - creator
     - default
-    - delay
     - delay_min
     - distinct_responder_count
     - escalation
@@ -782,20 +783,20 @@ concepts:
     - mean_seconds_to_resolve
     - mean_user_defined_engaged_seconds
     - move_to_next
+    - notify_type
     - on_call_handoff_notifications
     - order
     - order_by
-    - owner_team
-    - pagination_meta
     - priority
     - range_start
+    - recipient
     - related_alerts
     - related_incidents
+    - repeat
     - repeat_policy
     - repeating
     - repetitions
     - request_id
-    - result
   status_page:
     segments_seen:
       status-pages: 5
@@ -902,7 +903,7 @@ concepts:
       spellings:
       - updated_at
       - updated
-    long_tail_count: 101
+    long_tail_count: 99
     long_tail_sample:
     - announcement
     - company_name

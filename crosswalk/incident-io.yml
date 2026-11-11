@@ -61,10 +61,10 @@ concepts:
     - escalations
     properties:
       name: title
-      description: description
       id:
       - id
       - incident_id
+      description: description
     core_coverage: 0.75
     evidence:
     - openapi/_original/incident-io-openapi.json#GET /v2/escalations

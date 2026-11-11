@@ -45,9 +45,9 @@ concepts:
       time_zone: timezone
       team_id: teams
       layers: scheduleLayers
+      type: type
       escalation_policy: escalationPolicy
       start: start
-      type: type
       user: user
     core_coverage: 0.6
     evidence:

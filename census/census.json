@@ -31,13 +31,6 @@
      "POST collection"
     ],
     "properties": {
-     "incidents": "array",
-     "hasMore": "boolean",
-     "changeSeverity": "object",
-     "appendIntent": "object",
-     "overrideAttributes": "object",
-     "addAttributes": "object",
-     "upsertAttributes": "object",
      "id": "string",
      "title": "string",
      "integration": "object",
@@ -59,6 +52,11 @@
      "excludeFromUptimeCalculation": "boolean",
      "statusPageStartOverride": "string",
      "statusPageEndOverride": "string",
+     "changeSeverity": "object",
+     "appendIntent": "object",
+     "overrideAttributes": "object",
+     "addAttributes": "object",
+     "upsertAttributes": "object",
      "message": "string",
      "messageIsPublic": "boolean",
      "integrationId": "string",
@@ -140,9 +138,6 @@
      "created_at": "string",
      "updated_at": "string",
      "incidentUpdates": "array",
-     "length": "integer",
-     "entries": "array",
-     "nextId": "string",
      "severity": "string",
      "services": "array",
      "lastUpdateStatus": "string",
@@ -343,7 +338,9 @@
      "baseUri": "string",
      "instanceUri": "string",
      "incidentAction": "string",
-     "incidentPhases": "array"
+     "broadcastTemplate": "object",
+     "formTemplate": "object",
+     "templateId": "integer"
     },
     "evidence": [
      "openapi/_original/everbridge-digital-apps-openapi.json#GET /incidents/{incidentId}",
@@ -536,8 +533,6 @@
      "POST collection"
     ],
     "properties": {
-     "incidents": "array",
-     "pagination_meta": "object",
      "call_url": "string",
      "created_at": "string",
      "creator": "object",
@@ -1306,8 +1301,6 @@
      "POST collection"
     ],
     "properties": {
-     "incident_updates": "array",
-     "pagination_meta": "object",
      "created_at": "string",
      "id": "string",
      "incident_id": "string",
@@ -1454,9 +1447,6 @@
      "PUT item"
     ],
     "properties": {
-     "length": "integer",
-     "entries": "array",
-     "nextId": "string",
      "name": "string",
      "id": "string",
      "accountId": "string",
@@ -1494,8 +1484,6 @@
      "PUT item"
     ],
     "properties": {
-     "page": "object",
-     "services": "array",
      "slug": "string",
      "name": "string",
      "created_at": "string",
@@ -1706,8 +1694,17 @@
      "POST collection"
     ],
     "properties": {
-     "recordcount": "integer",
-     "service": "array",
+     "service_object_id": "string",
+     "host_name": "string",
+     "service_description": "string",
+     "display_name": "string",
+     "check_command": "string",
+     "max_check_attempts": "integer",
+     "check_interval": "number",
+     "retry_interval": "number",
+     "notification_interval": "number",
+     "check_period": "string",
+     "notification_period": "string",
      "success": "string"
     },
     "evidence": [
@@ -1814,7 +1811,11 @@
      "parent": "object",
      "sets": "array",
      "catch_all": "object",
-     "warnings": "array",
+     "message": "string",
+     "rule_id": "string",
+     "feature": "string",
+     "feature_type": "string",
+     "warning_type": "string",
      "trigger_type_name": "string",
      "trigger_type": "string",
      "condition": "string",
@@ -2237,8 +2238,6 @@
      "PUT item"
     ],
     "properties": {
-     "pagination_meta": "object",
-     "schedules": "array",
      "annotations": "object",
      "config": "object",
      "created_at": "string",
@@ -2281,7 +2280,12 @@
      "params": "object",
      "schedule": "object",
      "updated_at": "string",
-     "updated_by": "string"
+     "updated_by": "string",
+     "action_type_id": "string",
+     "alerts_filter": "object",
+     "frequency": "object",
+     "group": "string",
+     "uuid": "string"
     },
     "evidence": [
      "openapi/_original/kibana-openapi-original.yml#DELETE /api/attack_discovery/schedules/{id}",
@@ -2347,7 +2351,13 @@
      "rotations": "array",
      "result": "string",
      "took": "number",
-     "requestId": "string"
+     "requestId": "string",
+     "type": "string",
+     "startDate": "string",
+     "endDate": "string",
+     "length": "integer",
+     "participants": "array",
+     "timeRestriction": "object"
     },
     "evidence": [
      "openapi/_original/opsgenie-schedule-openapi.yml#DELETE /v2/schedules/{identifier}",
@@ -2526,7 +2536,10 @@
      "unique_id": "string",
      "escalation_policy": "object",
      "user": "object",
-     "oncalls": "array"
+     "username": "string",
+     "first_name": "string",
+     "last_name": "string",
+     "email": "string"
     },
     "evidence": [
      "openapi/_original/zenduty-openapi.json#DELETE /api/account/teams/{team_id}/schedules/{schedule_id}/",
@@ -2608,8 +2621,6 @@
      "POST collection"
     ],
     "properties": {
-     "escalations": "array",
-     "pagination_meta": "object",
      "created_at": "string",
      "creator": "object",
      "description": "string",
@@ -2644,15 +2655,15 @@
      "POST collection"
     ],
     "properties": {
-     "id": "string",
-     "name": "string",
-     "description": "string",
-     "ownerTeam": "object",
-     "rules": "array",
-     "repeat": "object",
+     "condition": "string",
+     "notifyType": "string",
+     "delay": "object",
+     "recipient": "object",
      "result": "string",
      "took": "number",
-     "requestId": "string"
+     "requestId": "string",
+     "id": "string",
+     "name": "string"
     },
     "evidence": [
      "openapi/_original/opsgenie-escalation-openapi.yml#DELETE /v2/escalations/{identifier}",
@@ -2870,9 +2881,6 @@
      "PUT item"
     ],
     "properties": {
-     "length": "integer",
-     "entries": "array",
-     "nextId": "string",
      "name": "string",
      "description": "string",
      "url": "string",
@@ -2886,17 +2894,19 @@
      "cards": "array",
      "version": "number",
      "id": "string",
-     "whiteLabel": "boolean",
+     "accountId": "string",
+     "created_at": "string",
+     "updated_at": "string",
+     "incidents": "array",
      "isPrivate": "boolean",
+     "keys": "array",
      "projectBindings": "object",
+     "whiteLabel": "boolean",
      "privacyPolicyLink": "string",
      "termsOfServiceLink": "string",
      "footerText": "string",
      "googleAnalyticsTag": "string",
-     "allowIndexing": "boolean",
-     "accountId": "string",
-     "created_at": "string",
-     "updated_at": "string"
+     "allowIndexing": "boolean"
     },
     "evidence": [
      "openapi/_original/checkly-public-api-openapi.json#DELETE /v1/status-pages/{statusPageId}",
@@ -3043,8 +3053,6 @@
      "GET item"
     ],
     "properties": {
-     "pagination_meta": "object",
-     "status_pages": "array",
      "description": "string",
      "id": "string",
      "name": "string",
@@ -3916,6 +3924,7 @@
     "kibana",
     "lightup",
     "moogsoft",
+    "nagios",
     "pagerduty",
     "phare",
     "sorry",
