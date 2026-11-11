@@ -1,0 +1,36 @@
+provider: uptime-com
+apis_io: https://apis.io/providers/uptime-com/
+context: incident-management
+generated: '2026-11-10'
+concepts:
+  incident:
+    path_segment:
+    - incidents
+    properties:
+      name: name
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/uptime-com-openapi.yml#GET /statuspages/{statuspage_pk}/incidents/
+    - openapi/_original/uptime-com-openapi.yml#POST /statuspages/{statuspage_pk}/incidents/
+  service:
+    path_segment:
+    - components
+    properties:
+      name: name
+      description: description
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/uptime-com-openapi.yml#GET /statuspages/{statuspage_pk}/components/
+    - openapi/_original/uptime-com-openapi.yml#POST /statuspages/{statuspage_pk}/components/
+  status_page:
+    path_segment:
+    - statuspages
+    properties:
+      name: name
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/uptime-com-openapi.yml#DELETE /statuspages/{pk}/
+    - openapi/_original/uptime-com-openapi.yml#GET /statuspages/
+    - openapi/_original/uptime-com-openapi.yml#GET /statuspages/{pk}/
+    - openapi/_original/uptime-com-openapi.yml#PATCH /statuspages/{pk}/
+    - openapi/_original/uptime-com-openapi.yml#POST /statuspages/

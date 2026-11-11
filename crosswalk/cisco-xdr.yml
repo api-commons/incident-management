@@ -1,0 +1,60 @@
+provider: cisco-xdr
+apis_io: https://apis.io/providers/cisco-xdr/
+context: incident-management
+generated: '2026-11-10'
+concepts:
+  incident:
+    path_segment:
+    - incident
+    - incidents
+    properties:
+      id: id
+      name: title
+      severity: severity
+      status: status
+      created_at:
+      - created
+      - created_at
+      updated_at: modified
+      description: description
+      type: type
+      commander_id:
+      - assignees
+      - owner
+      number: short_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/cisco-xdr-ctia-openapi.json#DELETE /ctia/incident/{id}
+    - openapi/_original/cisco-xdr-ctia-openapi.json#GET /ctia/incident/{id}
+    - openapi/_original/cisco-xdr-ctia-openapi.json#GET /ctia/{observable_type}/{observable_value}/sightings/incidents
+    - openapi/_original/cisco-xdr-ctia-openapi.json#PATCH /ctia/incident/{id}
+    - openapi/_original/cisco-xdr-ctia-openapi.json#POST /ctia/incident
+  incident_update:
+    path_segment:
+    - events
+    properties:
+      id: id
+      type: type
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/cisco-xdr-incidents-investigations-openapi.json#GET /v1/incident/{incident-id}/events
+    - openapi/_original/cisco-xdr-incidents-investigations-openapi.json#GET /v2/incident/{incident-id}/events
+    - openapi/_original/cisco-xdr-incidents-investigations-openapi.json#GET /v3/incident/{incident-id}/events
+    - openapi/_original/cisco-xdr-incidents-investigations-openapi.json#POST /v2/incident/{incident-id}/events
+  on_call_schedule:
+    path_segment:
+    - schedules
+    properties:
+      name: name
+      id: id
+      description: description
+      created_at: created_on
+      created_by: created_by
+      type: type
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/cisco-xdr-automation-openapi.json#DELETE /v1/schedules/{schedule_id}
+    - openapi/_original/cisco-xdr-automation-openapi.json#GET /v1/schedules
+    - openapi/_original/cisco-xdr-automation-openapi.json#GET /v1/schedules/{schedule_id}
+    - openapi/_original/cisco-xdr-automation-openapi.json#POST /v1/schedules
+    - openapi/_original/cisco-xdr-automation-openapi.json#PUT /v1/schedules/{schedule_id}

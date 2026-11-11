@@ -1,0 +1,92 @@
+provider: ilert
+apis_io: https://apis.io/providers/ilert/
+context: incident-management
+generated: '2026-11-10'
+concepts:
+  incident:
+    path_segment:
+    - incidents
+    properties:
+      id: id
+      name: summary
+      status: status
+      created_at: createdAt
+      updated_at: updatedAt
+      service_id: affectedServices
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/ilert-ilert-rest-api-openapi.yml#GET /incidents
+    - openapi/_original/ilert-ilert-rest-api-openapi.yml#GET /incidents/{id}
+    - openapi/_original/ilert-ilert-rest-api-openapi.yml#POST /incidents
+    - openapi/_original/ilert-ilert-rest-api-openapi.yml#PUT /incidents/{id}
+  service:
+    path_segment:
+    - services
+    properties:
+      name: name
+      description: description
+      id: id
+      owner_team_id: teams
+      status: status
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/ilert-ilert-rest-api-openapi.yml#DELETE /services/{id}
+    - openapi/_original/ilert-ilert-rest-api-openapi.yml#GET /services
+    - openapi/_original/ilert-ilert-rest-api-openapi.yml#GET /services/{id}
+    - openapi/_original/ilert-ilert-rest-api-openapi.yml#POST /services
+    - openapi/_original/ilert-ilert-rest-api-openapi.yml#PUT /services/{id}
+  on_call_schedule:
+    path_segment:
+    - schedules
+    - on-calls
+    properties:
+      name: name
+      id: id
+      time_zone: timezone
+      team_id: teams
+      layers: scheduleLayers
+      escalation_policy: escalationPolicy
+      start: start
+      type: type
+      user: user
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/ilert-ilert-rest-api-openapi.yml#DELETE /schedules/{id}
+    - openapi/_original/ilert-ilert-rest-api-openapi.yml#GET /on-calls
+    - openapi/_original/ilert-ilert-rest-api-openapi.yml#GET /schedules
+    - openapi/_original/ilert-ilert-rest-api-openapi.yml#GET /schedules/{id}
+    - openapi/_original/ilert-ilert-rest-api-openapi.yml#POST /schedules
+  escalation_policy:
+    path_segment:
+    - escalation-policies
+    properties:
+      name: name
+      id: id
+      rules: escalationRules
+      team_id: teams
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/ilert-ilert-rest-api-openapi.yml#DELETE /escalation-policies/{id}
+    - openapi/_original/ilert-ilert-rest-api-openapi.yml#GET /escalation-policies
+    - openapi/_original/ilert-ilert-rest-api-openapi.yml#GET /escalation-policies/{id}
+    - openapi/_original/ilert-ilert-rest-api-openapi.yml#POST /escalation-policies
+    - openapi/_original/ilert-ilert-rest-api-openapi.yml#PUT /escalation-policies/{id}
+  status_page:
+    path_segment:
+    - status-pages
+    properties:
+      name: name
+      id: id
+      subdomain:
+      - domain
+      - subdomain
+      components: services
+      logo_url: logoUrl
+      timezone: timezone
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/ilert-ilert-rest-api-openapi.yml#DELETE /status-pages/{id}
+    - openapi/_original/ilert-ilert-rest-api-openapi.yml#GET /status-pages
+    - openapi/_original/ilert-ilert-rest-api-openapi.yml#GET /status-pages/{id}
+    - openapi/_original/ilert-ilert-rest-api-openapi.yml#POST /status-pages
+    - openapi/_original/ilert-ilert-rest-api-openapi.yml#PUT /status-pages/{id}

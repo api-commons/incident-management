@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/incident-management/main/schema/status_page.json",
+  "title": "Status Page",
+  "description": "The common status_page in Incident Management, distilled from 10 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.8,
+      "x-commons-providers": 8,
+      "x-commons-spellings": [
+        "name",
+        "title",
+        "display_name"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.7,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "id"
+      ]
+    },
+    "subdomain": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.6,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "subdomain",
+        "custom_domain",
+        "domain",
+        "customDomain"
+      ]
+    },
+    "components": {
+      "type": "array",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.3,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "components",
+        "services"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.3,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "created_at",
+        "created"
+      ],
+      "format": "date-time"
+    },
+    "description": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.3,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "description"
+      ]
+    },
+    "logo_url": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.3,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "logo_url",
+        "logoUrl"
+      ]
+    },
+    "timezone": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.3,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "timezone"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.3,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "updated_at",
+        "updated"
+      ],
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "incident-management",
+    "concept": "status_page",
+    "providers": 10,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

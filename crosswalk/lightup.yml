@@ -1,0 +1,19 @@
+provider: lightup
+apis_io: https://apis.io/providers/lightup/
+context: incident-management
+generated: '2026-11-10'
+concepts:
+  incident:
+    path_segment:
+    - incidents
+    properties:
+      id:
+      - id
+      - uuid
+      severity: impact
+      status: status
+      metadata: metadata
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/lightup-dashboard-openapi.json#GET /api/v0/ws/{workspace_id}/incidents/
+    - openapi/_original/lightup-dashboard-openapi.json#GET /api/v0/ws/{workspace_id}/incidents/{incident_uuid}

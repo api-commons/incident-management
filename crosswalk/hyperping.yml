@@ -1,0 +1,31 @@
+provider: hyperping
+apis_io: https://apis.io/providers/hyperping/
+context: incident-management
+generated: '2026-11-10'
+concepts:
+  incident:
+    path_segment:
+    - incidents
+    properties:
+      id: uuid
+      name: title
+      severity: impact
+      status: status
+      created_at: created_at
+      resolved_at: resolved_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/hyperping-openapi.yml#DELETE /incidents/{incident_uuid}
+    - openapi/_original/hyperping-openapi.yml#GET /incidents
+    - openapi/_original/hyperping-openapi.yml#GET /incidents/{incident_uuid}
+    - openapi/_original/hyperping-openapi.yml#POST /incidents
+    - openapi/_original/hyperping-openapi.yml#PUT /incidents/{incident_uuid}
+  incident_update:
+    path_segment:
+    - updates
+    properties:
+      created_at: created_at
+      status: status
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/hyperping-openapi.yml#POST /incidents/{incident_uuid}/updates

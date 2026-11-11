@@ -1,0 +1,79 @@
+provider: zenduty
+apis_io: https://apis.io/providers/zenduty/
+context: incident-management
+generated: '2026-11-10'
+concepts:
+  incident:
+    path_segment:
+    - incidents
+    properties:
+      name:
+      - summary
+      - title
+      severity: urgency
+      status: status
+      created_at: creation_date
+      service_id: service
+      commander_id: assigned_to
+      number: incident_number
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/zenduty-openapi.json#GET /api/incidents/{incident_number}/
+    - openapi/_original/zenduty-openapi.json#PATCH /api/incidents/{unique_id}/
+    - openapi/_original/zenduty-openapi.json#POST /api/incidents/
+  service:
+    path_segment:
+    - services
+    properties:
+      name:
+      - name
+      - summary
+      description: description
+      created_at: creation date
+      owner_team_id: team
+      status: status
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/zenduty-openapi.json#DELETE /api/account/teams/{team_id}/services/{service_id}/
+    - openapi/_original/zenduty-openapi.json#GET /api/account/teams/{team_id}/services/{service_id}/
+    - openapi/_original/zenduty-openapi.json#GET /api/account/teams/{}/services/
+    - openapi/_original/zenduty-openapi.json#POST /api/account/teams/{}/services/
+    - openapi/_original/zenduty-openapi.json#PUT /api/account/teams/{team_id}/services/{service_id}/
+  on_call_schedule:
+    path_segment:
+    - schedules
+    - oncall
+    properties:
+      name:
+      - name
+      - summary
+      description: description
+      time_zone: time_zone
+      team_id: team
+      layers: layers
+      escalation_policy: escalation_policy
+      user: user
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/zenduty-openapi.json#DELETE /api/account/teams/{team_id}/schedules/{schedule_id}/
+    - openapi/_original/zenduty-openapi.json#GET /api/account/teams/{team_id}/oncall/
+    - openapi/_original/zenduty-openapi.json#GET /api/account/teams/{team_id}/schedules/{schedule_id}/
+    - openapi/_original/zenduty-openapi.json#GET /api/account/teams/{}/schedules/
+    - openapi/_original/zenduty-openapi.json#GET /api/v2/account/teams/{team_id}/escalation_policies/{ep_id}/oncall/
+  escalation_policy:
+    path_segment:
+    - escalation_policies
+    properties:
+      name:
+      - name
+      - summary
+      description: description
+      rules: rules
+      team_id: team
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/zenduty-openapi.json#DELETE /api/account/teams/{team_id}/escalation_policies/{escalation_policy_id}/
+    - openapi/_original/zenduty-openapi.json#GET /api/account/teams/{team_id}/escalation_policies/{escalation_policy_id}/
+    - openapi/_original/zenduty-openapi.json#GET /api/account/teams/{}/escalation_policies/
+    - openapi/_original/zenduty-openapi.json#POST /api/account/teams/{}/escalation_policies/
+    - openapi/_original/zenduty-openapi.json#PUT /api/account/teams/{team_id}/escalation_policies/{escalation_policy_id}/

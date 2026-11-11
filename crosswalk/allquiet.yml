@@ -1,0 +1,35 @@
+provider: allquiet
+apis_io: https://apis.io/providers/allquiet/
+context: incident-management
+generated: '2026-11-10'
+concepts:
+  incident:
+    path_segment:
+    - incident
+    properties:
+      id: id
+      name: title
+      severity: severity
+      status: status
+      created_at: createdAt
+      service_id:
+      - services
+      - serviceIds
+      metadata: attributes
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/allquiet-openapi.json#DELETE /api/public/v1/incident/{incidentId}
+    - openapi/_original/allquiet-openapi.json#PATCH /api/public/v1/incident/{incidentId}
+    - openapi/_original/allquiet-openapi.json#POST /api/public/v1/incident
+  service:
+    path_segment:
+    - service
+    properties:
+      name: displayName
+      id: id
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/allquiet-openapi.json#DELETE /api/public/v1/service/{id}
+    - openapi/_original/allquiet-openapi.json#GET /api/public/v1/service/{id}
+    - openapi/_original/allquiet-openapi.json#POST /api/public/v1/service
+    - openapi/_original/allquiet-openapi.json#PUT /api/public/v1/service/{id}

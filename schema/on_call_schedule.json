@@ -1,0 +1,165 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/incident-management/main/schema/on_call_schedule.json",
+  "title": "On Call Schedule",
+  "description": "The common on_call_schedule in Incident Management, distilled from 11 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.909,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "name",
+        "summary"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.818,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "id",
+        "guid",
+        "_id"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.636,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "description"
+      ]
+    },
+    "time_zone": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.636,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "timezone",
+        "time_zone"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.545,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "created",
+        "createdAt",
+        "created_on",
+        "created_at"
+      ],
+      "format": "date-time"
+    },
+    "team_id": {
+      "type": "array",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.455,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "teams",
+        "team_ids",
+        "teamId",
+        "team"
+      ]
+    },
+    "created_by": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.364,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "created_by",
+        "createdBy"
+      ]
+    },
+    "layers": {
+      "type": "array",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.364,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "layers",
+        "scheduleLayers",
+        "schedule_layers",
+        "final_schedule"
+      ]
+    },
+    "escalation_policy": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.273,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "escalation_policy",
+        "escalationPolicy"
+      ]
+    },
+    "start": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.273,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "start"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.273,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "type"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.273,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "updated",
+        "updatedAt",
+        "updated_at"
+      ],
+      "format": "date-time"
+    },
+    "user": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.273,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "user"
+      ]
+    },
+    "users": {
+      "type": "array",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.273,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "users"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "incident-management",
+    "concept": "on_call_schedule",
+    "providers": 11,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

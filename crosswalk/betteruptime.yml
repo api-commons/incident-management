@@ -1,0 +1,31 @@
+provider: betteruptime
+apis_io: https://apis.io/providers/betteruptime/
+context: incident-management
+generated: '2026-11-10'
+concepts:
+  incident:
+    path_segment:
+    - incidents
+    properties:
+      id: id
+      type: type
+      metadata: attributes
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/betteruptime-uptime-api-openapi.yml#GET /incidents
+  status_page:
+    path_segment:
+    - status-pages
+    properties:
+      id: id
+      subdomain:
+      - subdomain
+      - custom_domain
+      timezone: timezone
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/betteruptime-uptime-api-openapi.yml#DELETE /status-pages/{id}
+    - openapi/_original/betteruptime-uptime-api-openapi.yml#GET /status-pages
+    - openapi/_original/betteruptime-uptime-api-openapi.yml#GET /status-pages/{id}
+    - openapi/_original/betteruptime-uptime-api-openapi.yml#PATCH /status-pages/{id}
+    - openapi/_original/betteruptime-uptime-api-openapi.yml#POST /status-pages

@@ -1,0 +1,63 @@
+provider: phare
+apis_io: https://apis.io/providers/phare/
+context: incident-management
+generated: '2026-11-10'
+concepts:
+  incident:
+    path_segment:
+    - incidents
+    properties:
+      id: id
+      name: title
+      severity: impact
+      status:
+      - state
+      - status
+      created_at: created_at
+      updated_at: updated_at
+      description: description
+      type: type
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/phare-openapi.json#DELETE /uptime/incidents/{incidentId}
+    - openapi/_original/phare-openapi.json#GET /uptime/incidents
+    - openapi/_original/phare-openapi.json#GET /uptime/incidents/{incidentId}
+    - openapi/_original/phare-openapi.json#POST /uptime/incidents
+    - openapi/_original/phare-openapi.json#POST /uptime/incidents/{incidentId}
+  incident_update:
+    path_segment:
+    - updates
+    properties:
+      created_at: created_at
+      id: id
+      body: content
+      status: state
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/phare-openapi.json#DELETE /uptime/incidents/{incidentId}/updates/{incidentUpdateId}
+    - openapi/_original/phare-openapi.json#GET /uptime/incidents/{incidentId}/updates
+    - openapi/_original/phare-openapi.json#GET /uptime/incidents/{incidentId}/updates/{incidentUpdateId}
+    - openapi/_original/phare-openapi.json#POST /uptime/incidents/{incidentId}/updates
+    - openapi/_original/phare-openapi.json#POST /uptime/incidents/{incidentId}/updates/{incidentUpdateId}
+  status_page:
+    path_segment:
+    - status-pages
+    properties:
+      name:
+      - name
+      - title
+      id: id
+      subdomain:
+      - subdomain
+      - domain
+      components: components
+      created_at: created_at
+      description: description
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/phare-openapi.json#DELETE /uptime/status-pages/{statusPageId}
+    - openapi/_original/phare-openapi.json#GET /uptime/status-pages
+    - openapi/_original/phare-openapi.json#GET /uptime/status-pages/{statusPageId}
+    - openapi/_original/phare-openapi.json#POST /uptime/status-pages
+    - openapi/_original/phare-openapi.json#POST /uptime/status-pages/{statusPageId}

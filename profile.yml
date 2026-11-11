@@ -1,0 +1,946 @@
+context: incident-management
+name: Incident Management
+generated: '2026-11-10'
+version: 0.1.0-draft.20261110
+status: draft
+cohort:
+  tags:
+  - Incident Management
+  - Incident Response
+  - On-Call
+  - Alerting
+  - Status Page
+  - Status Pages
+  - SRE
+  - Site Reliability Engineering
+  providers_with_harvested_openapi: 75
+thresholds:
+  core: 0.5
+  extended: 0.2
+  min_providers: 3
+excluded:
+  service:
+    cyware: /rest-auth/components are the platform's own components
+duplicates: {}
+shared_specs: {}
+concepts:
+  incident:
+    segments_seen:
+      incidents: 24
+      incident: 6
+    providers_exposing: 27
+    providers_with_readable_schema: 24
+    operations:
+    - operation: GET item
+      providers: 22
+      share: 0.815
+      tier: core
+    - operation: GET collection
+      providers: 21
+      share: 0.778
+      tier: core
+    - operation: POST collection
+      providers: 17
+      share: 0.63
+      tier: core
+    - operation: UPDATE item
+      providers: 12
+      share: 0.444
+      tier: extended
+    - operation: DELETE item
+      providers: 11
+      share: 0.407
+      tier: extended
+    - operation: POST item
+      providers: 2
+      share: 0.074
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 2
+      share: 0.074
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 21
+      share: 0.875
+      type: string
+      spellings:
+      - id
+      - uuid
+      - incident-id
+      - incident_id
+      - _id
+      - incidentId
+    - name: name
+      tier: core
+      providers: 17
+      share: 0.708
+      type: string
+      spellings:
+      - title
+      - name
+      - summary
+    - name: severity
+      tier: core
+      providers: 17
+      share: 0.708
+      type: string
+      spellings:
+      - severity
+      - impact
+      - priority
+      - urgency
+      - severity_id
+    - name: status
+      tier: core
+      providers: 17
+      share: 0.708
+      type: string
+      spellings:
+      - status
+      - incidentStatus
+      - incident_status
+      - state
+    - name: created_at
+      tier: core
+      providers: 14
+      share: 0.583
+      type: string
+      spellings:
+      - created_at
+      - createdAt
+      - created
+      - creation_date
+    - name: updated_at
+      tier: extended
+      providers: 9
+      share: 0.375
+      type: string
+      spellings:
+      - updated_at
+      - updatedAt
+      - modified
+    - name: description
+      tier: extended
+      providers: 8
+      share: 0.333
+      type: string
+      spellings:
+      - description
+      - details
+      - body
+    - name: service_id
+      tier: extended
+      providers: 8
+      share: 0.333
+      type: array
+      spellings:
+      - services
+      - service
+      - serviceIds
+      - affectedServices
+      - service_id
+    - name: type
+      tier: extended
+      providers: 7
+      share: 0.292
+      type: string
+      spellings:
+      - type
+    - name: metadata
+      tier: extended
+      providers: 6
+      share: 0.25
+      type: object
+      spellings:
+      - attributes
+      - metadata
+      - CustomFields
+      - custom_fields
+    - name: commander_id
+      tier: extended
+      providers: 5
+      share: 0.208
+      type: string
+      spellings:
+      - owner
+      - assignee
+      - assignees
+      - assigned_to
+    - name: number
+      tier: extended
+      providers: 5
+      share: 0.208
+      type: integer
+      spellings:
+      - incident_number
+      - short_id
+      - number
+      - reference
+    - name: resolved_at
+      tier: extended
+      providers: 5
+      share: 0.208
+      type: string
+      spellings:
+      - resolved_at
+      - resolvedAt
+      - end_time
+      - resolved
+    - name: started_at
+      tier: extended
+      providers: 5
+      share: 0.208
+      type: string
+      spellings:
+      - startedAt
+      - started_at
+      - start_time
+    long_tail_count: 410
+    long_tail_sample:
+    - team_id
+    - duration
+    - incident_type
+    - integration
+    - reason
+    - tags
+    - updates
+    - acknowledged_at
+    - active
+    - escalation_policy
+    - events
+    - groups
+    - incident_key
+    - incident_type_id
+    - labels
+    - monitors
+    - resolved_on
+    - sla
+    - account
+    - acknowledged_by
+    - acknowledged_date
+    - acknowledged_user_ids
+    - acknowledged_user_names
+    - acknowledgement_count
+    - acknowledgements
+    - activated
+    - activatinging_user_id
+    - active_user_count
+    - add_attributes
+    - affected_components
+    - affected_teams
+    - ai_generated_name
+    - ai_incident_summary
+    - alert_counts
+    - alert_grouping
+    - alert_ids
+    - alert_sources
+    - alerts
+    - alerts_count
+    - all
+  incident_update:
+    segments_seen:
+      updates: 3
+      events: 3
+      notes: 2
+      incident_updates: 2
+      timeline: 1
+      incident-updates: 1
+      log_entries: 1
+    providers_exposing: 10
+    providers_with_readable_schema: 7
+    operations:
+    - operation: GET collection
+      providers: 8
+      share: 0.8
+      tier: core
+    - operation: POST collection
+      providers: 7
+      share: 0.7
+      tier: core
+    - operation: DELETE item
+      providers: 3
+      share: 0.3
+      tier: extended
+    - operation: GET item
+      providers: 3
+      share: 0.3
+      tier: extended
+    - operation: UPDATE item
+      providers: 3
+      share: 0.3
+      tier: extended
+    - operation: POST item
+      providers: 1
+      share: 0.1
+      tier: long-tail
+    properties:
+    - name: created_at
+      tier: core
+      providers: 6
+      share: 0.857
+      type: string
+      spellings:
+      - created_at
+    - name: id
+      tier: core
+      providers: 6
+      share: 0.857
+      type: string
+      spellings:
+      - id
+      - incident_id
+      - incidentId
+    - name: body
+      tier: core
+      providers: 4
+      share: 0.571
+      type: string
+      spellings:
+      - content
+      - description
+      - body
+      - note
+    - name: status
+      tier: extended
+      providers: 3
+      share: 0.429
+      type: string
+      spellings:
+      - status
+      - state
+    - name: type
+      tier: extended
+      providers: 3
+      share: 0.429
+      type: string
+      spellings:
+      - type
+    long_tail_count: 60
+    long_tail_sample:
+    - author_id
+    - context
+    - updated_at
+    - acknowledgement_timeout
+    - channel
+    - compacted_entities
+    - compacted_relations
+    - confidence
+    - contexts
+    - conversations
+    - creator
+    - event_details
+    - external_ids
+    - external_references
+    - idempotency_key
+    - incident
+    - indicators
+    - internal
+    - investigation_id
+    - investigation_short_description
+    - investigation_source
+    - language
+    - merged_into_incident_id
+    - mitre_data
+    - name
+    - new_incident_status
+    - new_severity
+    - notability
+    - notable
+    - notify_subscribers
+    - observables
+    - observed_time
+    - occurred_at
+    - original
+    - pagination_meta
+    - public_incident_update_date
+    - published_at
+    - relations
+    - resolution
+    - revision
+  service:
+    segments_seen:
+      services: 8
+      components: 3
+      service: 1
+      business_services: 1
+      component: 1
+    providers_exposing: 11
+    providers_with_readable_schema: 10
+    operations:
+    - operation: GET collection
+      providers: 10
+      share: 0.909
+      tier: core
+    - operation: GET item
+      providers: 10
+      share: 0.909
+      tier: core
+    - operation: POST collection
+      providers: 10
+      share: 0.909
+      tier: core
+    - operation: DELETE item
+      providers: 9
+      share: 0.818
+      tier: core
+    - operation: UPDATE item
+      providers: 9
+      share: 0.818
+      tier: core
+    - operation: UPDATE collection
+      providers: 1
+      share: 0.091
+      tier: long-tail
+    properties:
+    - name: name
+      tier: core
+      providers: 10
+      share: 1.0
+      type: string
+      spellings:
+      - name
+      - displayName
+      - summary
+    - name: description
+      tier: core
+      providers: 8
+      share: 0.8
+      type: string
+      spellings:
+      - description
+    - name: id
+      tier: core
+      providers: 7
+      share: 0.7
+      type: string
+      spellings:
+      - id
+      - _id
+    - name: created_at
+      tier: core
+      providers: 5
+      share: 0.5
+      type: string
+      spellings:
+      - created_at
+      - createdAt
+      - creation date
+    - name: owner_team_id
+      tier: extended
+      providers: 4
+      share: 0.4
+      type: array
+      spellings:
+      - teams
+      - team
+      - owner
+    - name: status
+      tier: extended
+      providers: 4
+      share: 0.4
+      type: string
+      spellings:
+      - status
+    - name: updated_at
+      tier: extended
+      providers: 3
+      share: 0.3
+      type: string
+      spellings:
+      - updated_at
+      - updatedAt
+    long_tail_count: 159
+    long_tail_sample:
+    - acknowledgement_timeout
+    - auto_resolve_timeout
+    - created_by
+    - escalation_policy_id
+    - integrations
+    - service_id
+    - tags
+    - team_id
+    - type
+    - account_id
+    - acknowledgement_timeout_enabled
+    - acknowlegement_timeout
+    - active_incidents
+    - addons
+    - aggregate_unit
+    - alert_creation
+    - alert_grouping
+    - alert_grouping_parameters
+    - alert_grouping_timeout
+    - alert_on_add
+    - alias
+    - allowed_params
+    - application_selector
+    - auto_add_responding_team
+    - auto_creating_jira_tickets_enabled
+    - auto_pause_notifications_parameters
+    - auto_status_down
+    - aws_targets_arn
+    - business_service
+    - catch_all
+    - checklists
+    - collation
+    - collation_time
+    - completed_checks
+    - condition
+    - counter_id
+    - default_jira_issue_fields
+    - dependent_service
+    - desc
+    - display_order
+  on_call_schedule:
+    segments_seen:
+      schedules: 10
+      on-calls: 2
+      oncalls: 1
+      oncall: 1
+    providers_exposing: 11
+    providers_with_readable_schema: 11
+    operations:
+    - operation: GET collection
+      providers: 11
+      share: 1.0
+      tier: core
+    - operation: GET item
+      providers: 10
+      share: 0.909
+      tier: core
+    - operation: POST collection
+      providers: 10
+      share: 0.909
+      tier: core
+    - operation: DELETE item
+      providers: 9
+      share: 0.818
+      tier: core
+    - operation: UPDATE item
+      providers: 9
+      share: 0.818
+      tier: core
+    properties:
+    - name: name
+      tier: core
+      providers: 10
+      share: 0.909
+      type: string
+      spellings:
+      - name
+      - summary
+    - name: id
+      tier: core
+      providers: 9
+      share: 0.818
+      type: string
+      spellings:
+      - id
+      - guid
+      - _id
+    - name: description
+      tier: core
+      providers: 7
+      share: 0.636
+      type: string
+      spellings:
+      - description
+    - name: time_zone
+      tier: core
+      providers: 7
+      share: 0.636
+      type: string
+      spellings:
+      - timezone
+      - time_zone
+    - name: created_at
+      tier: core
+      providers: 6
+      share: 0.545
+      type: string
+      spellings:
+      - created
+      - createdAt
+      - created_on
+      - created_at
+    - name: team_id
+      tier: extended
+      providers: 5
+      share: 0.455
+      type: array
+      spellings:
+      - teams
+      - team_ids
+      - teamId
+      - team
+    - name: created_by
+      tier: extended
+      providers: 4
+      share: 0.364
+      type: string
+      spellings:
+      - created_by
+      - createdBy
+    - name: layers
+      tier: extended
+      providers: 4
+      share: 0.364
+      type: array
+      spellings:
+      - layers
+      - scheduleLayers
+      - schedule_layers
+      - final_schedule
+    - name: escalation_policy
+      tier: extended
+      providers: 3
+      share: 0.273
+      type: object
+      spellings:
+      - escalation_policy
+      - escalationPolicy
+    - name: start
+      tier: extended
+      providers: 3
+      share: 0.273
+      type: string
+      spellings:
+      - start
+    - name: type
+      tier: extended
+      providers: 3
+      share: 0.273
+      type: string
+      spellings:
+      - type
+    - name: updated_at
+      tier: extended
+      providers: 3
+      share: 0.273
+      type: string
+      spellings:
+      - updated
+      - updatedAt
+      - updated_at
+    - name: user
+      tier: extended
+      providers: 3
+      share: 0.273
+      type: object
+      spellings:
+      - user
+    - name: users
+      tier: extended
+      providers: 3
+      share: 0.273
+      type: array
+      spellings:
+      - users
+    long_tail_count: 61
+    long_tail_sample:
+    - enabled
+    - end
+    - escalation_level
+    - rotation
+    - updated_by
+    - annotations
+    - attack_configuration
+    - base_type
+    - command
+    - comms_payload
+    - config
+    - create_source
+    - created_by_name
+    - current_shift
+    - current_shifts
+    - default_shift_duration
+    - discarded
+    - escalation_policies
+    - failure_flag_targets
+    - handoff
+    - holidays_public_config
+    - initial_next_fire_time
+    - integration
+    - last_fired_result
+    - last_fired_time
+    - last_updated
+    - last_updated_by
+    - metadata
+    - next_fired_time
+    - next_shift
+    - next_shifts
+    - next_trigger_time
+    - on_call
+    - org_id
+    - overrides
+    - overrides_subschedule
+    - owner
+    - owner_team
+    - pagination_meta
+    - permalink
+  escalation_policy:
+    segments_seen:
+      escalation_policies: 3
+      escalations: 3
+      escalation-policies: 1
+    providers_exposing: 7
+    providers_with_readable_schema: 7
+    operations:
+    - operation: GET collection
+      providers: 7
+      share: 1.0
+      tier: core
+    - operation: GET item
+      providers: 7
+      share: 1.0
+      tier: core
+    - operation: POST collection
+      providers: 6
+      share: 0.857
+      tier: core
+    - operation: DELETE item
+      providers: 5
+      share: 0.714
+      tier: core
+    - operation: UPDATE item
+      providers: 5
+      share: 0.714
+      tier: core
+    properties:
+    - name: name
+      tier: core
+      providers: 7
+      share: 1.0
+      type: string
+      spellings:
+      - name
+      - title
+      - summary
+    - name: description
+      tier: core
+      providers: 5
+      share: 0.714
+      type: string
+      spellings:
+      - description
+    - name: id
+      tier: core
+      providers: 5
+      share: 0.714
+      type: string
+      spellings:
+      - id
+      - incident_id
+      - escalation_policy_id
+      - _id
+    - name: rules
+      tier: core
+      providers: 5
+      share: 0.714
+      type: array
+      spellings:
+      - rules
+      - steps
+      - escalationRules
+      - escalation_rules
+    - name: team_id
+      tier: extended
+      providers: 3
+      share: 0.429
+      type: array
+      spellings:
+      - teams
+      - team_id
+      - team
+    long_tail_count: 66
+    long_tail_sample:
+    - created_at
+    - repeat
+    - aggregate_unit
+    - creator
+    - default
+    - delay
+    - delay_min
+    - distinct_responder_count
+    - escalation
+    - escalation_path_id
+    - escalation_policy_name
+    - events
+    - filters
+    - frequency
+    - global_ep
+    - handoff_step
+    - idempotency_key
+    - mean_assignment_count
+    - mean_engaged_seconds
+    - mean_engaged_user_count
+    - mean_seconds_to_engage
+    - mean_seconds_to_first_ack
+    - mean_seconds_to_mobilize
+    - mean_seconds_to_resolve
+    - mean_user_defined_engaged_seconds
+    - move_to_next
+    - on_call_handoff_notifications
+    - order
+    - order_by
+    - owner_team
+    - pagination_meta
+    - priority
+    - range_start
+    - related_alerts
+    - related_incidents
+    - repeat_policy
+    - repeating
+    - repetitions
+    - request_id
+    - result
+  status_page:
+    segments_seen:
+      status-pages: 5
+      status_pages: 3
+      statuspages: 2
+      pages: 1
+    providers_exposing: 10
+    providers_with_readable_schema: 10
+    operations:
+    - operation: GET collection
+      providers: 10
+      share: 1.0
+      tier: core
+    - operation: DELETE item
+      providers: 8
+      share: 0.8
+      tier: core
+    - operation: GET item
+      providers: 8
+      share: 0.8
+      tier: core
+    - operation: POST collection
+      providers: 8
+      share: 0.8
+      tier: core
+    - operation: UPDATE item
+      providers: 6
+      share: 0.6
+      tier: core
+    - operation: POST item
+      providers: 1
+      share: 0.1
+      tier: long-tail
+    properties:
+    - name: name
+      tier: core
+      providers: 8
+      share: 0.8
+      type: string
+      spellings:
+      - name
+      - title
+      - display_name
+    - name: id
+      tier: core
+      providers: 7
+      share: 0.7
+      type: string
+      spellings:
+      - id
+    - name: subdomain
+      tier: core
+      providers: 6
+      share: 0.6
+      type: string
+      spellings:
+      - subdomain
+      - custom_domain
+      - domain
+      - customDomain
+    - name: components
+      tier: extended
+      providers: 3
+      share: 0.3
+      type: array
+      spellings:
+      - components
+      - services
+    - name: created_at
+      tier: extended
+      providers: 3
+      share: 0.3
+      type: string
+      spellings:
+      - created_at
+      - created
+    - name: description
+      tier: extended
+      providers: 3
+      share: 0.3
+      type: string
+      spellings:
+      - description
+    - name: logo_url
+      tier: extended
+      providers: 3
+      share: 0.3
+      type: string
+      spellings:
+      - logo_url
+      - logoUrl
+    - name: timezone
+      tier: extended
+      providers: 3
+      share: 0.3
+      type: string
+      spellings:
+      - timezone
+    - name: updated_at
+      tier: extended
+      providers: 3
+      share: 0.3
+      type: string
+      spellings:
+      - updated_at
+      - updated
+    long_tail_count: 101
+    long_tail_sample:
+    - announcement
+    - company_name
+    - company_url
+    - history
+    - is_private
+    - logo_dark
+    - metadata
+    - password
+    - password_enabled
+    - status
+    - subscribable
+    - theme
+    - type
+    - website_url
+    - access
+    - access_ips
+    - access_password
+    - access_password_enabled
+    - access_token
+    - access_token_enabled
+    - account_id
+    - activated
+    - allow_indexing
+    - allow_search_index
+    - allow_subscriptions
+    - announcement_embed_visible
+    - announcement_in_widget
+    - announcement_on_page
+    - appearance
+    - audience_specific
+    - auth_secret
+    - badge_url_dark
+    - badge_url_light
+    - cards
+    - cname
+    - color_scheme
+    - company_website
+    - components_count
+    - contact_url
+    - default_theme

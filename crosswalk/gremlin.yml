@@ -1,0 +1,40 @@
+provider: gremlin
+apis_io: https://apis.io/providers/gremlin/
+context: incident-management
+generated: '2026-11-10'
+concepts:
+  incident:
+    path_segment:
+    - incidents
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/gremlin-openapi.yml#GET /newrelic/incidents/{incidentId}
+    - openapi/_original/gremlin-openapi.yml#GET /pagerduty/incidents
+  service:
+    path_segment:
+    - services
+    properties:
+      name: name
+      description: description
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/gremlin-openapi.yml#DELETE /services/{serviceId}
+    - openapi/_original/gremlin-openapi.yml#GET /jira/issues/services
+    - openapi/_original/gremlin-openapi.yml#GET /pagerduty/services
+    - openapi/_original/gremlin-openapi.yml#GET /reliability-management/services/{serviceId}
+    - openapi/_original/gremlin-openapi.yml#GET /reports/companies/reliability-management/services
+  on_call_schedule:
+    path_segment:
+    - schedules
+    properties:
+      id: guid
+      created_at: createdAt
+      created_by: createdBy
+      updated_at: updatedAt
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/gremlin-openapi.yml#DELETE /schedules/{guid}
+    - openapi/_original/gremlin-openapi.yml#GET /scenarios/{guid}/schedules
+    - openapi/_original/gremlin-openapi.yml#GET /schedules/{guid}
+    - openapi/_original/gremlin-openapi.yml#POST /schedules

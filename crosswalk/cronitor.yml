@@ -1,0 +1,22 @@
+provider: cronitor
+apis_io: https://apis.io/providers/cronitor/
+context: incident-management
+generated: '2026-11-10'
+concepts:
+  status_page:
+    path_segment:
+    - statuspages
+    properties:
+      name: name
+      subdomain: custom_domain
+      components: components
+      created_at: created
+      logo_url: logo_url
+      updated_at: updated
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/cronitor-openapi.json#DELETE /api/statuspages/{key}
+    - openapi/_original/cronitor-openapi.json#GET /api/statuspages
+    - openapi/_original/cronitor-openapi.json#GET /api/statuspages/{key}
+    - openapi/_original/cronitor-openapi.json#POST /api/statuspages
+    - openapi/_original/cronitor-openapi.json#PUT /api/statuspages/{key}

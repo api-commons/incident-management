@@ -1,0 +1,17 @@
+provider: openstatus
+apis_io: https://apis.io/providers/openstatus/
+context: incident-management
+generated: '2026-11-10'
+concepts:
+  incident:
+    path_segment:
+    - incident
+    properties:
+      id: id
+      resolved_at: resolvedAt
+      started_at: startedAt
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/openstatus-openapi.yml#GET /incident
+    - openapi/_original/openstatus-openapi.yml#GET /incident/{id}
+    - openapi/_original/openstatus-openapi.yml#PUT /incident/{id}

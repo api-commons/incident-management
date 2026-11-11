@@ -1,0 +1,34 @@
+provider: statuspage
+apis_io: https://apis.io/providers/statuspage/
+context: incident-management
+generated: '2026-11-10'
+concepts:
+  incident:
+    path_segment:
+    - incidents
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/statuspage-openapi.yml#DELETE /pages/{page_id}/incidents/{incident_id}
+    - openapi/_original/statuspage-openapi.yml#GET /pages/{page_id}/incidents
+    - openapi/_original/statuspage-openapi.yml#GET /pages/{page_id}/incidents/{incident_id}
+    - openapi/_original/statuspage-openapi.yml#PATCH /pages/{page_id}/incidents/{incident_id}
+    - openapi/_original/statuspage-openapi.yml#POST /pages/{page_id}/incidents
+  incident_update:
+    path_segment:
+    - incident_updates
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/statuspage-openapi.yml#PATCH /pages/{page_id}/incidents/{incident_id}/incident_updates/{incident_update_id}
+  service:
+    path_segment:
+    - components
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/statuspage-openapi.yml#DELETE /pages/{page_id}/components/{component_id}
+    - openapi/_original/statuspage-openapi.yml#GET /pages/{page_id}/components
+    - openapi/_original/statuspage-openapi.yml#GET /pages/{page_id}/components/{component_id}
+    - openapi/_original/statuspage-openapi.yml#PATCH /pages/{page_id}/components/{component_id}
+    - openapi/_original/statuspage-openapi.yml#POST /pages/{page_id}/components

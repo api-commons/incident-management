@@ -1,0 +1,60 @@
+aid: common-incident-management
+name: Incident Management
+type: Common
+description: 'The common Incident Management vocabulary, distilled from the harvested OpenAPI of 75 providers in
+  APIs.io: shared operations, JSON Schema per concept with measured adoption, and a crosswalk from the common names
+  to each provider''s own.'
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+- Application Programming Interface
+- API
+- Incident Management
+- Incident Response
+- On-Call
+- Alerting
+- Common Schema
+created: '2026-11-10'
+modified: '2026-11-10'
+url: https://raw.githubusercontent.com/api-commons/incident-management/main/apis.yml
+specificationVersion: '0.20'
+apis:
+- aid: common-incident-management:incident-management
+  name: Common Incident Management Interface
+  description: The Incident Management interface the market already shares, measured.
+  humanURL: https://github.com/api-commons/incident-management
+  tags:
+  - Incident Management
+  - Incident Response
+  properties:
+  - type: OpenAPI
+    url: https://raw.githubusercontent.com/api-commons/incident-management/main/openapi.yml
+  - type: Profile
+    url: https://raw.githubusercontent.com/api-commons/incident-management/main/profile.yml
+  - type: Adopters
+    url: https://raw.githubusercontent.com/api-commons/incident-management/main/adopters.yml
+  - type: Rules
+    url: https://raw.githubusercontent.com/api-commons/schema-commons/main/ruleset/schema-commons-naming.yaml
+  - type: JSONSchema
+    name: incident
+    url: https://raw.githubusercontent.com/api-commons/incident-management/main/schema/incident.json
+  - type: JSONSchema
+    name: incident_update
+    url: https://raw.githubusercontent.com/api-commons/incident-management/main/schema/incident_update.json
+  - type: JSONSchema
+    name: service
+    url: https://raw.githubusercontent.com/api-commons/incident-management/main/schema/service.json
+  - type: JSONSchema
+    name: on_call_schedule
+    url: https://raw.githubusercontent.com/api-commons/incident-management/main/schema/on_call_schedule.json
+  - type: JSONSchema
+    name: escalation_policy
+    url: https://raw.githubusercontent.com/api-commons/incident-management/main/schema/escalation_policy.json
+  - type: JSONSchema
+    name: status_page
+    url: https://raw.githubusercontent.com/api-commons/incident-management/main/schema/status_page.json
+common:
+- type: License
+  url: https://raw.githubusercontent.com/api-commons/incident-management/main/LICENSE
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

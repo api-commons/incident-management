@@ -1,0 +1,23 @@
+provider: uptimerobot
+apis_io: https://apis.io/providers/uptimerobot/
+context: incident-management
+generated: '2026-11-10'
+concepts:
+  incident:
+    path_segment:
+    - incidents
+    properties:
+      id: id
+      name: title
+      severity: severity
+      status: status
+      type: type
+      resolved_at:
+      - resolvedAt
+      - resolved
+      started_at: startedAt
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/uptimerobot-openapi.yaml#GET /incidents
+    - openapi/_original/uptimerobot-openapi.yaml#GET /incidents/{id}
+    - openapi/_original/uptimerobot-openapi.yaml#GET /monitors/{id}/dependency/incidents

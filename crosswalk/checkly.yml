@@ -1,0 +1,77 @@
+provider: checkly
+apis_io: https://apis.io/providers/checkly/
+context: incident-management
+generated: '2026-11-10'
+concepts:
+  incident:
+    path_segment:
+    - incidents
+    properties:
+      id: id
+      name: name
+      severity:
+      - impact
+      - severity
+      created_at: created_at
+      updated_at: updated_at
+      service_id: services
+      started_at: startedAt
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/checkly-public-api-openapi.json#DELETE /v1/incidents/{id}
+    - openapi/_original/checkly-public-api-openapi.json#DELETE /v1/status-pages/incidents/{incidentId}
+    - openapi/_original/checkly-public-api-openapi.json#DELETE /v3/status-pages/{statusPageId}/incidents/{incidentId}
+    - openapi/_original/checkly-public-api-openapi.json#GET /v1/incidents/{id}
+    - openapi/_original/checkly-public-api-openapi.json#GET /v1/status-pages/incidents
+  incident_update:
+    path_segment:
+    - incident-updates
+    - updates
+    properties:
+      created_at: created_at
+      id:
+      - id
+      - incidentId
+      body: description
+      status: status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/checkly-public-api-openapi.json#DELETE /v1/incidents/{incidentId}/updates/{id}
+    - openapi/_original/checkly-public-api-openapi.json#DELETE /v1/status-pages/incidents/{incidentId}/incident-updates/{incidentUpdateId}
+    - openapi/_original/checkly-public-api-openapi.json#DELETE /v3/status-pages/{statusPageId}/incidents/{incidentId}/incident-updates/{incidentUpdateId}
+    - openapi/_original/checkly-public-api-openapi.json#GET /v1/status-pages/incidents/{incidentId}/incident-updates
+    - openapi/_original/checkly-public-api-openapi.json#GET /v1/status-pages/incidents/{incidentId}/incident-updates/{incidentUpdateId}
+  service:
+    path_segment:
+    - services
+    - components
+    properties:
+      name: name
+      description: description
+      id: id
+      created_at: created_at
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/checkly-public-api-openapi.json#DELETE /v1/status-pages/services/{serviceId}
+    - openapi/_original/checkly-public-api-openapi.json#DELETE /v3/status-pages/{statusPageId}/components/{componentId}
+    - openapi/_original/checkly-public-api-openapi.json#GET /v1/status-pages/services
+    - openapi/_original/checkly-public-api-openapi.json#GET /v1/status-pages/services/{serviceId}
+    - openapi/_original/checkly-public-api-openapi.json#GET /v3/status-pages/{statusPageId}/components
+  status_page:
+    path_segment:
+    - status-pages
+    properties:
+      name: name
+      id: id
+      subdomain: customDomain
+      created_at: created_at
+      description: description
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/checkly-public-api-openapi.json#DELETE /v1/status-pages/{statusPageId}
+    - openapi/_original/checkly-public-api-openapi.json#DELETE /v3/status-pages/{statusPageId}
+    - openapi/_original/checkly-public-api-openapi.json#GET /v1/status-pages
+    - openapi/_original/checkly-public-api-openapi.json#GET /v1/status-pages/{statusPageId}
+    - openapi/_original/checkly-public-api-openapi.json#GET /v3/status-pages

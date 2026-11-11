@@ -1,0 +1,83 @@
+provider: incident-io
+apis_io: https://apis.io/providers/incident-io/
+context: incident-management
+generated: '2026-11-10'
+concepts:
+  incident:
+    path_segment:
+    - incidents
+    properties:
+      id: id
+      name:
+      - name
+      - summary
+      severity:
+      - severity
+      - severity_id
+      status:
+      - status
+      - incident_status
+      created_at: created_at
+      updated_at: updated_at
+      number: reference
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/incident-io-openapi.json#GET /v1/incidents
+    - openapi/_original/incident-io-openapi.json#GET /v1/incidents/{id}
+    - openapi/_original/incident-io-openapi.json#GET /v2/incidents
+    - openapi/_original/incident-io-openapi.json#GET /v2/incidents/{id}
+    - openapi/_original/incident-io-openapi.json#POST /v1/incidents
+  incident_update:
+    path_segment:
+    - incident_updates
+    properties:
+      created_at: created_at
+      id:
+      - id
+      - incident_id
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/incident-io-openapi.json#GET /v2/incident_updates
+    - openapi/_original/incident-io-openapi.json#POST /v2/incident_updates
+  on_call_schedule:
+    path_segment:
+    - schedules
+    properties:
+      name: name
+      id: id
+      time_zone: timezone
+      created_at: created_at
+      team_id: team_ids
+      updated_at: updated_at
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/incident-io-openapi.json#DELETE /v2/schedules/{id}
+    - openapi/_original/incident-io-openapi.json#GET /v2/schedules
+    - openapi/_original/incident-io-openapi.json#GET /v2/schedules/{id}
+    - openapi/_original/incident-io-openapi.json#POST /v2/schedules
+    - openapi/_original/incident-io-openapi.json#PUT /v2/schedules/{id}
+  escalation_policy:
+    path_segment:
+    - escalations
+    properties:
+      name: title
+      description: description
+      id:
+      - id
+      - incident_id
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/incident-io-openapi.json#GET /v2/escalations
+    - openapi/_original/incident-io-openapi.json#GET /v2/escalations/{id}
+    - openapi/_original/incident-io-openapi.json#POST /v2/escalations
+  status_page:
+    path_segment:
+    - status_pages
+    properties:
+      name: name
+      id: id
+      description: description
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/incident-io-openapi.json#GET /v2/status_pages
+    - openapi/_original/incident-io-openapi.json#GET /v2/status_pages/{status_page_id}

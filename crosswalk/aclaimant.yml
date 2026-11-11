@@ -1,0 +1,13 @@
+provider: aclaimant
+apis_io: https://apis.io/providers/aclaimant/
+context: incident-management
+generated: '2026-11-10'
+concepts:
+  incident:
+    path_segment:
+    - incidents
+    properties:
+      id: incident-id
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/aclaimant-platform-api-swagger.json#POST /v1/incidents

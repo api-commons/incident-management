@@ -1,0 +1,19 @@
+provider: squadcast
+apis_io: https://apis.io/providers/squadcast/
+context: incident-management
+generated: '2026-11-10'
+concepts:
+  incident:
+    path_segment:
+    - incidents
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/squadcast-openapi.yml#GET /v3/incidents/{incidentID}
+  incident_update:
+    path_segment:
+    - events
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/squadcast-openapi.yml#GET /v3/incidents/{incidentID}/events

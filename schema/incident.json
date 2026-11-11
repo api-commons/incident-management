@@ -1,0 +1,189 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/incident-management/main/schema/incident.json",
+  "title": "Incident",
+  "description": "The common incident in Incident Management, distilled from 24 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.875,
+      "x-commons-providers": 21,
+      "x-commons-spellings": [
+        "id",
+        "uuid",
+        "incident-id",
+        "incident_id",
+        "_id",
+        "incidentId"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.708,
+      "x-commons-providers": 17,
+      "x-commons-spellings": [
+        "title",
+        "name",
+        "summary"
+      ]
+    },
+    "severity": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.708,
+      "x-commons-providers": 17,
+      "x-commons-spellings": [
+        "severity",
+        "impact",
+        "priority",
+        "urgency",
+        "severity_id"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.708,
+      "x-commons-providers": 17,
+      "x-commons-spellings": [
+        "status",
+        "incidentStatus",
+        "incident_status",
+        "state"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.583,
+      "x-commons-providers": 14,
+      "x-commons-spellings": [
+        "created_at",
+        "createdAt",
+        "created",
+        "creation_date"
+      ],
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.375,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "updated_at",
+        "updatedAt",
+        "modified"
+      ],
+      "format": "date-time"
+    },
+    "description": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 8,
+      "x-commons-spellings": [
+        "description",
+        "details",
+        "body"
+      ]
+    },
+    "service_id": {
+      "type": "array",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 8,
+      "x-commons-spellings": [
+        "services",
+        "service",
+        "serviceIds",
+        "affectedServices",
+        "service_id"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.292,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "type"
+      ]
+    },
+    "metadata": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.25,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "attributes",
+        "metadata",
+        "CustomFields",
+        "custom_fields"
+      ]
+    },
+    "commander_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.208,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "owner",
+        "assignee",
+        "assignees",
+        "assigned_to"
+      ]
+    },
+    "number": {
+      "type": "integer",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.208,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "incident_number",
+        "short_id",
+        "number",
+        "reference"
+      ]
+    },
+    "resolved_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.208,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "resolved_at",
+        "resolvedAt",
+        "end_time",
+        "resolved"
+      ],
+      "format": "date-time"
+    },
+    "started_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.208,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "startedAt",
+        "started_at",
+        "start_time"
+      ],
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "incident-management",
+    "concept": "incident",
+    "providers": 24,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

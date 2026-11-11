@@ -1,0 +1,107 @@
+provider: firehydrant
+apis_io: https://apis.io/providers/firehydrant/
+context: incident-management
+generated: '2026-11-10'
+concepts:
+  incident:
+    path_segment:
+    - incidents
+    properties:
+      id: id
+      name:
+      - name
+      - summary
+      severity:
+      - priority
+      - severity
+      status: status
+      created_at: created_at
+      description: description
+      service_id: services
+      type: type
+      metadata: custom_fields
+      number: number
+      started_at: started_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/firehydrant-api-openapi.yml#DELETE /v1/incidents/{incident_id}
+    - openapi/_original/firehydrant-api-openapi.yml#GET /v1/incidents
+    - openapi/_original/firehydrant-api-openapi.yml#GET /v1/incidents/{incident_id}
+    - openapi/_original/firehydrant-api-openapi.yml#GET /v1/metrics/incidents
+    - openapi/_original/firehydrant-api-openapi.yml#PATCH /v1/incidents/{incident_id}
+  incident_update:
+    path_segment:
+    - events
+    - notes
+    properties:
+      created_at: created_at
+      id:
+      - id
+      - incident_id
+      body: body
+      type: type
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/firehydrant-api-openapi.yml#DELETE /v1/incidents/{incident_id}/events/{event_id}
+    - openapi/_original/firehydrant-api-openapi.yml#GET /v1/incidents/{incident_id}/events
+    - openapi/_original/firehydrant-api-openapi.yml#GET /v1/incidents/{incident_id}/events/{event_id}
+    - openapi/_original/firehydrant-api-openapi.yml#PATCH /v1/incidents/{incident_id}/events/{event_id}
+    - openapi/_original/firehydrant-api-openapi.yml#PATCH /v1/incidents/{incident_id}/notes/{note_id}
+  service:
+    path_segment:
+    - services
+    properties:
+      name: name
+      description: description
+      id: id
+      created_at: created_at
+      owner_team_id:
+      - owner
+      - teams
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/firehydrant-api-openapi.yml#DELETE /v1/services/{service_id}
+    - openapi/_original/firehydrant-api-openapi.yml#GET /v1/functionalities/{functionality_id}/services
+    - openapi/_original/firehydrant-api-openapi.yml#GET /v1/services
+    - openapi/_original/firehydrant-api-openapi.yml#GET /v1/services/{service_id}
+    - openapi/_original/firehydrant-api-openapi.yml#GET /v1/users/{id}/services
+  on_call_schedule:
+    path_segment:
+    - schedules
+    properties:
+      name: name
+      id: id
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/firehydrant-api-openapi.yml#GET /v1/schedules
+  escalation_policy:
+    path_segment:
+    - escalation_policies
+    properties:
+      name: name
+      description: description
+      rules: steps
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/firehydrant-api-openapi.yml#DELETE /v1/teams/{team_id}/escalation_policies/{id}
+    - openapi/_original/firehydrant-api-openapi.yml#GET /v1/teams/{team_id}/escalation_policies
+    - openapi/_original/firehydrant-api-openapi.yml#GET /v1/teams/{team_id}/escalation_policies/{id}
+    - openapi/_original/firehydrant-api-openapi.yml#PATCH /v1/teams/{team_id}/escalation_policies/{id}
+    - openapi/_original/firehydrant-api-openapi.yml#POST /v1/teams/{team_id}/escalation_policies
+  status_page:
+    path_segment:
+    - status_pages
+    - pages
+    properties:
+      name:
+      - name
+      - display_name
+      - title
+      id: id
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/firehydrant-api-openapi.yml#DELETE /v1/incidents/{incident_id}/status_pages/{status_page_id}
+    - openapi/_original/firehydrant-api-openapi.yml#GET /v1/incidents/{incident_id}/status_pages
+    - openapi/_original/firehydrant-api-openapi.yml#GET /v1/integrations/statuspage/connections/{connection_id}/pages
+    - openapi/_original/firehydrant-api-openapi.yml#POST /v1/incidents/{incident_id}/status_pages

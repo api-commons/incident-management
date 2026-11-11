@@ -1,0 +1,17 @@
+provider: splunk-observability
+apis_io: https://apis.io/providers/splunk-observability/
+context: incident-management
+generated: '2026-11-10'
+concepts:
+  incident:
+    path_segment:
+    - incident
+    - incidents
+    properties:
+      id: incidentId
+      severity: severity
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/splunk-observability-detectors-openapi.yml#GET /detector/{id}/incidents
+    - openapi/_original/splunk-observability-incidents-openapi.yml#GET /incident
+    - openapi/_original/splunk-observability-incidents-openapi.yml#GET /incident/{id}

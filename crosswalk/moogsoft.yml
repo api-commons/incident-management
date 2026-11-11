@@ -1,0 +1,49 @@
+provider: moogsoft
+apis_io: https://apis.io/providers/moogsoft/
+context: incident-management
+generated: '2026-11-10'
+concepts:
+  incident:
+    path_segment:
+    - incidents
+    properties:
+      id:
+      - incident_id
+      - id
+      name: name
+      severity:
+      - severity
+      - priority
+      - impact
+      - urgency
+      status: status
+      created_at: created_at
+      description: description
+      service_id: services
+      commander_id: assignee
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/moogsoft-alerts-incidents-openapi.yaml#GET /v1/incidents
+    - openapi/_original/moogsoft-alerts-incidents-openapi.yaml#GET /v1/incidents/{incidentId}
+    - openapi/_original/moogsoft-alerts-incidents-openapi.yaml#PATCH /v1/incidents
+    - openapi/_original/moogsoft-alerts-incidents-openapi.yaml#PATCH /v1/incidents/{incidentId}
+    - openapi/_original/moogsoft-alerts-incidents-openapi.yaml#POST /v1/incidents
+  on_call_schedule:
+    path_segment:
+    - schedules
+    properties:
+      name: name
+      id: id
+      description: description
+      time_zone: timezone
+      created_at: created
+      created_by: created_by
+      start: start
+      users: users
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/moogsoft-incident-responder-openapi.yaml#DELETE /v1/on-call/schedules/{id}
+    - openapi/_original/moogsoft-incident-responder-openapi.yaml#GET /v1/on-call/schedules
+    - openapi/_original/moogsoft-incident-responder-openapi.yaml#GET /v1/on-call/schedules/{id}
+    - openapi/_original/moogsoft-incident-responder-openapi.yaml#PATCH /v1/on-call/schedules/{id}
+    - openapi/_original/moogsoft-incident-responder-openapi.yaml#POST /v1/on-call/schedules

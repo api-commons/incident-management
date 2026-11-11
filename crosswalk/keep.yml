@@ -1,0 +1,23 @@
+provider: keep
+apis_io: https://apis.io/providers/keep/
+context: incident-management
+generated: '2026-11-10'
+concepts:
+  incident:
+    path_segment:
+    - incidents
+    properties:
+      id: id
+      severity: severity
+      status: status
+      service_id: services
+      commander_id: assignee
+      resolved_at: end_time
+      started_at: start_time
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/keep-openapi.json#DELETE /incidents/{incident_id}
+    - openapi/_original/keep-openapi.json#GET /incidents
+    - openapi/_original/keep-openapi.json#GET /incidents/{incident_id}
+    - openapi/_original/keep-openapi.json#POST /incidents
+    - openapi/_original/keep-openapi.json#PUT /incidents/{incident_id}

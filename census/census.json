@@ -1,0 +1,3954 @@
+{
+ "cohort_size": 75,
+ "unreadable": [],
+ "concepts": {
+  "incident": {
+   "aclaimant": {
+    "segments": [
+     "incidents"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "result": "string",
+     "incident-ident": "string",
+     "incident-id": "string",
+     "incident": "object",
+     "integration": null
+    },
+    "evidence": [
+     "openapi/_original/aclaimant-platform-api-swagger.json#POST /v1/incidents"
+    ]
+   },
+   "allquiet": {
+    "segments": [
+     "incident"
+    ],
+    "operations": [
+     "DELETE item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "incidents": "array",
+     "hasMore": "boolean",
+     "changeSeverity": "object",
+     "appendIntent": "object",
+     "overrideAttributes": "object",
+     "addAttributes": "object",
+     "upsertAttributes": "object",
+     "id": "string",
+     "title": "string",
+     "integration": "object",
+     "createdAt": "string",
+     "lastUpdatedAt": "string",
+     "attributes": "array",
+     "events": "array",
+     "eventsTotalCount": "integer",
+     "services": "array",
+     "sourceUser": "object",
+     "unattended": "boolean",
+     "isArchived": "boolean",
+     "onCallUsers": "array",
+     "teams": "array",
+     "snoozed": "object",
+     "subIncidents": "array",
+     "allowedIntents": "array",
+     "canDelete": "boolean",
+     "excludeFromUptimeCalculation": "boolean",
+     "statusPageStartOverride": "string",
+     "statusPageEndOverride": "string",
+     "message": "string",
+     "messageIsPublic": "boolean",
+     "integrationId": "string",
+     "teamIds": "array",
+     "status": "string",
+     "severity": "string",
+     "serviceIds": "array",
+     "userAssignments": "array",
+     "publicComment": "string"
+    },
+    "evidence": [
+     "openapi/_original/allquiet-openapi.json#DELETE /api/public/v1/incident/{incidentId}",
+     "openapi/_original/allquiet-openapi.json#PATCH /api/public/v1/incident/{incidentId}",
+     "openapi/_original/allquiet-openapi.json#POST /api/public/v1/incident"
+    ]
+   },
+   "betterstack": {
+    "segments": [
+     "incidents"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "summary": "string",
+     "description": "string",
+     "requester_email": "string",
+     "call": "boolean",
+     "sms": "boolean",
+     "email": "boolean",
+     "push": "boolean",
+     "team_wait": "integer",
+     "policy_id": "string"
+    },
+    "evidence": [
+     "openapi/_original/betterstack-openapi.yml#DELETE /incidents/{id}",
+     "openapi/_original/betterstack-openapi.yml#GET /incidents",
+     "openapi/_original/betterstack-openapi.yml#GET /incidents/{id}",
+     "openapi/_original/betterstack-openapi.yml#POST /incidents"
+    ]
+   },
+   "betteruptime": {
+    "segments": [
+     "incidents"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "type": "string",
+     "attributes": "object"
+    },
+    "evidence": [
+     "openapi/_original/betteruptime-uptime-api-openapi.yml#GET /incidents"
+    ]
+   },
+   "checkly": {
+    "segments": [
+     "incidents"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "name": "string",
+     "impact": "string",
+     "startedAt": "string",
+     "stoppedAt": "string",
+     "dashboardId": "number",
+     "id": "string",
+     "created_at": "string",
+     "updated_at": "string",
+     "incidentUpdates": "array",
+     "length": "integer",
+     "entries": "array",
+     "nextId": "string",
+     "severity": "string",
+     "services": "array",
+     "lastUpdateStatus": "string",
+     "duration": "integer",
+     "statusPageId": "string",
+     "componentImpacts": "array"
+    },
+    "evidence": [
+     "openapi/_original/checkly-public-api-openapi.json#DELETE /v1/incidents/{id}",
+     "openapi/_original/checkly-public-api-openapi.json#DELETE /v1/status-pages/incidents/{incidentId}",
+     "openapi/_original/checkly-public-api-openapi.json#DELETE /v3/status-pages/{statusPageId}/incidents/{incidentId}",
+     "openapi/_original/checkly-public-api-openapi.json#GET /v1/incidents/{id}",
+     "openapi/_original/checkly-public-api-openapi.json#GET /v1/status-pages/incidents",
+     "openapi/_original/checkly-public-api-openapi.json#GET /v1/status-pages/incidents/{incidentId}",
+     "openapi/_original/checkly-public-api-openapi.json#GET /v3/status-pages/{statusPageId}/incidents",
+     "openapi/_original/checkly-public-api-openapi.json#GET /v3/status-pages/{statusPageId}/incidents/{incidentId}",
+     "openapi/_original/checkly-public-api-openapi.json#POST /v1/incidents",
+     "openapi/_original/checkly-public-api-openapi.json#POST /v1/status-pages/incidents",
+     "openapi/_original/checkly-public-api-openapi.json#POST /v3/status-pages/{statusPageId}/incidents",
+     "openapi/_original/checkly-public-api-openapi.json#PUT /v1/incidents/{id}"
+    ]
+   },
+   "cisco-xdr": {
+    "segments": [
+     "incident",
+     "incidents"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "description": "string",
+     "assignees": "array",
+     "detection_sources": "array",
+     "meta": "object",
+     "schema_version": "string",
+     "revision": "integer",
+     "type": "string",
+     "source": "string",
+     "external_ids": "array",
+     "short_description": "string",
+     "title": "string",
+     "incident_time": "object",
+     "external_references": "array",
+     "discovery_method": "string",
+     "source_uri": "string",
+     "intended_effect": "string",
+     "categories": "array",
+     "status": "string",
+     "language": "string",
+     "detection_status": "string",
+     "id": "string",
+     "promotion_method": "string",
+     "severity": "string",
+     "tlp": "string",
+     "scores": "object",
+     "techniques": "array",
+     "timestamp": "string",
+     "confidence": "string",
+     "short_id": "string",
+     "tactics": "array",
+     "authorized_groups": "array",
+     "authorized_users": "array",
+     "created": "string",
+     "modified": "string",
+     "client_id": "string",
+     "groups": "array",
+     "owner": "string",
+     "created_at": "string",
+     "data": null,
+     "issuer": "string",
+     "acknowledged_at": "string",
+     "emiter": "object",
+     "sign": "object",
+     "enrichment_status": "string"
+    },
+    "evidence": [
+     "openapi/_original/cisco-xdr-ctia-openapi.json#DELETE /ctia/incident/{id}",
+     "openapi/_original/cisco-xdr-ctia-openapi.json#GET /ctia/incident/{id}",
+     "openapi/_original/cisco-xdr-ctia-openapi.json#GET /ctia/{observable_type}/{observable_value}/sightings/incidents",
+     "openapi/_original/cisco-xdr-ctia-openapi.json#PATCH /ctia/incident/{id}",
+     "openapi/_original/cisco-xdr-ctia-openapi.json#POST /ctia/incident",
+     "openapi/_original/cisco-xdr-ctia-openapi.json#PUT /ctia/incident/{id}",
+     "openapi/_original/cisco-xdr-incidents-investigations-openapi.json#DELETE /v2/incident/{incident-id}",
+     "openapi/_original/cisco-xdr-incidents-investigations-openapi.json#GET /v2/incident/{incident-id}",
+     "openapi/_original/cisco-xdr-incidents-investigations-openapi.json#PATCH /v2/incident/{incident-id}",
+     "openapi/_original/cisco-xdr-incidents-investigations-openapi.json#POST /v2/incident",
+     "openapi/_original/cisco-xdr-incidents-investigations-openapi.json#PUT /v2/incident/{incident-id}",
+     "openapi/_original/cisco-xdr-iroh-event-openapi.json#GET /iroh/iroh-event/event/incident/{incident-id}"
+    ]
+   },
+   "demisto": {
+    "segments": [
+     "incident"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "ShardID": "integer",
+     "account": "string",
+     "activated": "string",
+     "activatingingUserId": "string",
+     "attachment": "array",
+     "autime": "integer",
+     "canvases": "array",
+     "category": "string",
+     "changeStatus": "string",
+     "closeNotes": "string",
+     "closeReason": "string",
+     "closed": "string",
+     "closingUserId": "string",
+     "created": "string",
+     "details": "string",
+     "droppedCount": "integer",
+     "dueDate": "string",
+     "hasRole": "boolean",
+     "id": "string",
+     "insights": "integer",
+     "investigationId": "string",
+     "isPlayground": "boolean",
+     "labels": "array",
+     "lastOpen": "string",
+     "linkedCount": "integer",
+     "linkedIncidents": "array",
+     "modified": "string",
+     "name": "string",
+     "notifyTime": "string",
+     "occurred": "string",
+     "openDuration": "integer",
+     "owner": "string",
+     "parent": "string",
+     "phase": "string",
+     "playbookId": "string",
+     "previousRoles": "array",
+     "rawCategory": "string",
+     "rawCloseReason": "string",
+     "rawJSON": "string",
+     "rawName": "string",
+     "rawPhase": "string",
+     "rawType": "string",
+     "reason": "string",
+     "reminder": "string",
+     "roles": "array",
+     "runStatus": "string",
+     "severity": "number",
+     "sla": "number",
+     "sortValues": "array",
+     "sourceBrand": "string",
+     "sourceInstance": "string",
+     "status": "number",
+     "type": "string",
+     "version": "integer",
+     "createInvestigation": "boolean",
+     "CustomFields": "object",
+     "all": "boolean",
+     "columns": "array",
+     "data": "object",
+     "filter": "object",
+     "force": "boolean",
+     "ids": "array",
+     "line": "string",
+     "originalIncidentId": "string",
+     "overrideInvestigation": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/demisto-openapi-original.json#POST /incident",
+     "openapi/_original/demisto-openapi-original.json#POST /incident/batch"
+    ]
+   },
+   "everbridge": {
+    "segments": [
+     "incidents"
+    ],
+    "operations": [
+     "GET item",
+     "POST item"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string",
+     "incidentStatus": "string",
+     "incidentCreatedDate": "integer",
+     "incidentLastModifiedDate": "integer",
+     "incidentClosedDate": "integer",
+     "incidentDuration": "integer",
+     "messages": "array",
+     "firstPageUri": "string",
+     "lastPageUri": "string",
+     "message": "string",
+     "nextPageUri": "string",
+     "page": "object",
+     "baseUri": "string",
+     "instanceUri": "string",
+     "incidentAction": "string",
+     "incidentPhases": "array"
+    },
+    "evidence": [
+     "openapi/_original/everbridge-digital-apps-openapi.json#GET /incidents/{incidentId}",
+     "openapi/_original/everbridge-eb-suite-openapi.json#GET /incidents/{organizationId}",
+     "openapi/_original/everbridge-eb-suite-openapi.json#POST /incidents/{organizationId}"
+    ]
+   },
+   "firehydrant": {
+    "segments": [
+     "incidents"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "created_at": "string",
+     "started_at": "string",
+     "discarded_at": "string",
+     "summary": "string",
+     "customer_impact_summary": "string",
+     "description": "string",
+     "current_milestone": "string",
+     "number": "integer",
+     "priority": "string",
+     "severity": "string",
+     "severity_color": "string",
+     "severity_impact": "string",
+     "severity_condition": "string",
+     "tag_list": "array",
+     "severity_impact_object": "object",
+     "severity_condition_object": "object",
+     "private_id": "string",
+     "organization_id": "string",
+     "milestones": "array",
+     "lifecycle_phases": "array",
+     "lifecycle_measurements": "array",
+     "active": "boolean",
+     "labels": "object",
+     "role_assignments": "array",
+     "status_pages": "array",
+     "incident_url": "string",
+     "private_status_page_url": "string",
+     "organization": "object",
+     "customers_impacted": "integer",
+     "monetary_impact": "integer",
+     "monetary_impact_cents": "integer",
+     "last_update": "string",
+     "last_note": "object",
+     "report_id": "string",
+     "ai_incident_summary": "string",
+     "services": "array",
+     "environments": "array",
+     "functionalities": "array",
+     "channel_name": "string",
+     "channel_reference": "string",
+     "channel_id": "string",
+     "channel_status": "string",
+     "incident_tickets": "array",
+     "ticket": "object",
+     "impacts": "array",
+     "conference_bridges": "array",
+     "incident_channels": "array",
+     "retro_exports": "array",
+     "created_by": "object",
+     "context_object": "object",
+     "team_assignments": "array",
+     "conversations": "array",
+     "custom_fields": "array",
+     "field_requirements": "array",
+     "severity_condition_id": "string",
+     "severity_impact_id": "string",
+     "alert_ids": "array",
+     "runbook_ids": "array",
+     "restricted": "boolean",
+     "team_ids": "array",
+     "external_links": "string",
+     "skip_incident_type_values": "boolean",
+     "type": "string",
+     "by": "string",
+     "bucket_size": "integer",
+     "display_information": "object",
+     "keys": "array",
+     "buckets": "array",
+     "sort": "object",
+     "status": "string",
+     "incident_type_id": "string"
+    },
+    "evidence": [
+     "openapi/_original/firehydrant-api-openapi.yml#DELETE /v1/incidents/{incident_id}",
+     "openapi/_original/firehydrant-api-openapi.yml#GET /v1/incidents",
+     "openapi/_original/firehydrant-api-openapi.yml#GET /v1/incidents/{incident_id}",
+     "openapi/_original/firehydrant-api-openapi.yml#GET /v1/metrics/incidents",
+     "openapi/_original/firehydrant-api-openapi.yml#PATCH /v1/incidents/{incident_id}",
+     "openapi/_original/firehydrant-api-openapi.yml#POST /v1/incidents",
+     "openapi/_original/firehydrant-openapi.yml#DELETE /incidents/{incident_id}",
+     "openapi/_original/firehydrant-openapi.yml#GET /incidents",
+     "openapi/_original/firehydrant-openapi.yml#GET /incidents/{incident_id}",
+     "openapi/_original/firehydrant-openapi.yml#PATCH /incidents/{incident_id}",
+     "openapi/_original/firehydrant-openapi.yml#POST /incidents"
+    ]
+   },
+   "gremlin": {
+    "segments": [
+     "incidents"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/gremlin-openapi.yml#GET /newrelic/incidents/{incidentId}",
+     "openapi/_original/gremlin-openapi.yml#GET /pagerduty/incidents"
+    ]
+   },
+   "hyperping": {
+    "segments": [
+     "incidents"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "uuid": "string",
+     "title": "string",
+     "status": "string",
+     "impact": "string",
+     "monitors": "array",
+     "updates": "array",
+     "created_at": "string",
+     "resolved_at": "string",
+     "message": "string"
+    },
+    "evidence": [
+     "openapi/_original/hyperping-openapi.yml#DELETE /incidents/{incident_uuid}",
+     "openapi/_original/hyperping-openapi.yml#GET /incidents",
+     "openapi/_original/hyperping-openapi.yml#GET /incidents/{incident_uuid}",
+     "openapi/_original/hyperping-openapi.yml#POST /incidents",
+     "openapi/_original/hyperping-openapi.yml#PUT /incidents/{incident_uuid}"
+    ]
+   },
+   "ilert": {
+    "segments": [
+     "incidents"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "number",
+     "summary": "string",
+     "status": "string",
+     "message": "string",
+     "sendNotification": "boolean",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "affectedServices": "array",
+     "resolvedOn": "string",
+     "subscribed": "boolean",
+     "affectedTeams": "array",
+     "history": "array"
+    },
+    "evidence": [
+     "openapi/_original/ilert-ilert-rest-api-openapi.yml#GET /incidents",
+     "openapi/_original/ilert-ilert-rest-api-openapi.yml#GET /incidents/{id}",
+     "openapi/_original/ilert-ilert-rest-api-openapi.yml#POST /incidents",
+     "openapi/_original/ilert-ilert-rest-api-openapi.yml#PUT /incidents/{id}"
+    ]
+   },
+   "incident-io": {
+    "segments": [
+     "incidents"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "incidents": "array",
+     "pagination_meta": "object",
+     "call_url": "string",
+     "created_at": "string",
+     "creator": "object",
+     "custom_field_entries": "array",
+     "id": "string",
+     "incident_role_assignments": "array",
+     "incident_type": "object",
+     "mode": "string",
+     "name": "string",
+     "permalink": "string",
+     "postmortem_document_url": "string",
+     "reference": "string",
+     "severity": "object",
+     "slack_channel_id": "string",
+     "slack_channel_name": "string",
+     "slack_team_id": "string",
+     "status": "string",
+     "summary": "string",
+     "timestamps": "array",
+     "updated_at": "string",
+     "visibility": "string",
+     "idempotency_key": "string",
+     "incident_type_id": "string",
+     "severity_id": "string",
+     "source_message_channel_id": "string",
+     "source_message_timestamp": "string",
+     "debriefs": "array",
+     "duration_metrics": "array",
+     "external_issue_reference": "object",
+     "has_debrief": "boolean",
+     "incident_status": "object",
+     "incident_timestamp_values": "array",
+     "last_activity_at": "string",
+     "ms_teams_channel_url": "string",
+     "postmortem_document_ids": "array",
+     "slack_channel_url": "string",
+     "team_ids": "array",
+     "workload_minutes_late": "number",
+     "workload_minutes_sleeping": "number",
+     "workload_minutes_total": "number",
+     "workload_minutes_working": "number",
+     "incident_status_id": "string",
+     "retrospective_incident_options": "object",
+     "slack_channel_name_override": "string"
+    },
+    "evidence": [
+     "openapi/_original/incident-io-openapi.json#GET /v1/incidents",
+     "openapi/_original/incident-io-openapi.json#GET /v1/incidents/{id}",
+     "openapi/_original/incident-io-openapi.json#GET /v2/incidents",
+     "openapi/_original/incident-io-openapi.json#GET /v2/incidents/{id}",
+     "openapi/_original/incident-io-openapi.json#POST /v1/incidents",
+     "openapi/_original/incident-io-openapi.json#POST /v2/incidents"
+    ]
+   },
+   "keep": {
+    "segments": [
+     "incidents"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "user_generated_name": "string",
+     "assignee": "string",
+     "user_summary": "string",
+     "same_incident_in_the_past_id": "string",
+     "id": "string",
+     "start_time": "string",
+     "last_seen_time": "string",
+     "end_time": "string",
+     "creation_time": "string",
+     "alerts_count": "integer",
+     "alert_sources": "array",
+     "severity": null,
+     "status": null,
+     "services": "array",
+     "is_predicted": "boolean",
+     "is_confirmed": "boolean",
+     "generated_summary": "string",
+     "ai_generated_name": "string",
+     "rule_fingerprint": "string",
+     "fingerprint": "string",
+     "merged_into_incident_id": "string",
+     "merged_by": "string",
+     "merged_at": "string"
+    },
+    "evidence": [
+     "openapi/_original/keep-openapi.json#DELETE /incidents/{incident_id}",
+     "openapi/_original/keep-openapi.json#GET /incidents",
+     "openapi/_original/keep-openapi.json#GET /incidents/{incident_id}",
+     "openapi/_original/keep-openapi.json#POST /incidents",
+     "openapi/_original/keep-openapi.json#PUT /incidents/{incident_id}"
+    ]
+   },
+   "lightup": {
+    "segments": [
+     "incidents"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "data": "array",
+     "metadata": null,
+     "ref": "object",
+     "close_ts": "number",
+     "creation_ts": "number",
+     "direction": null,
+     "end_ts": "number",
+     "filter_uuid": "string",
+     "id": "integer",
+     "impact": "number",
+     "incident_type": null,
+     "ongoing": "boolean",
+     "reason": "string",
+     "send_reminder": "boolean",
+     "slice": "object",
+     "start_ts": "number",
+     "status": null,
+     "updated_ts": "number",
+     "uuid": "string",
+     "validation": null
+    },
+    "evidence": [
+     "openapi/_original/lightup-dashboard-openapi.json#GET /api/v0/ws/{workspace_id}/incidents/",
+     "openapi/_original/lightup-dashboard-openapi.json#GET /api/v0/ws/{workspace_id}/incidents/{incident_uuid}"
+    ]
+   },
+   "moogsoft": {
+    "segments": [
+     "incidents"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH collection",
+     "PATCH item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "status": "string",
+     "severity": "string",
+     "severity_high_water": "string",
+     "assignee": "string",
+     "assigned_groups": "array",
+     "first_event_time": "integer",
+     "last_event_time": "integer",
+     "description": "string",
+     "status_numeric": "integer",
+     "severity_numeric": "integer",
+     "severity_high_water_numeric": "integer",
+     "incident_id": "integer",
+     "closed_on": "integer",
+     "created_at": "integer",
+     "classes": "array",
+     "services": "array",
+     "in_progress_on": "integer",
+     "last_state_change": "integer",
+     "resolved_on": "integer",
+     "superseded_on": "integer",
+     "superseded_by": "integer",
+     "merged_into_incident": "integer",
+     "correlation_definition": "string",
+     "source_correlation_name": "string",
+     "tags": "object",
+     "types": "array",
+     "policies": "array",
+     "alerts": "array",
+     "maintenance_windows": "array",
+     "auto_closed_on": "integer",
+     "priority": "string",
+     "impact": "string",
+     "urgency": "string",
+     "external_details": "array",
+     "comments": "array",
+     "sources": "array",
+     "total_alerts": "integer",
+     "external_names": "array",
+     "in_maintenance": "boolean",
+     "manual_description_set": "boolean",
+     "priority_numeric": "integer",
+     "resolving_steps": "integer",
+     "resolve_time": "integer",
+     "start": "integer",
+     "limit": "integer",
+     "json_filter": "object",
+     "json_sort": "array",
+     "keyword": "string",
+     "utc_offset": "string",
+     "search_after": "array",
+     "fields": "array",
+     "ids": "array",
+     "id": "string",
+     "name": "string",
+     "email_template_id": "string",
+     "email_subject": "string",
+     "users": "array",
+     "groups": "array",
+     "operation": "string"
+    },
+    "evidence": [
+     "openapi/_original/moogsoft-alerts-incidents-openapi.yaml#GET /v1/incidents",
+     "openapi/_original/moogsoft-alerts-incidents-openapi.yaml#GET /v1/incidents/{incidentId}",
+     "openapi/_original/moogsoft-alerts-incidents-openapi.yaml#PATCH /v1/incidents",
+     "openapi/_original/moogsoft-alerts-incidents-openapi.yaml#PATCH /v1/incidents/{incidentId}",
+     "openapi/_original/moogsoft-alerts-incidents-openapi.yaml#POST /v1/incidents",
+     "openapi/_original/moogsoft-alerts-incidents-openapi.yaml#PUT /v1/incidents/{incidentId}",
+     "openapi/_original/moogsoft-config-openapi.yaml#DELETE /v1/watchers/incidents/{id}",
+     "openapi/_original/moogsoft-config-openapi.yaml#GET /v1/watchers/incidents/{id}",
+     "openapi/_original/moogsoft-config-openapi.yaml#PUT /v1/watchers/incidents/{id}"
+    ]
+   },
+   "openstatus": {
+    "segments": [
+     "incident"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "integer",
+     "startedAt": "string",
+     "acknowledgedAt": "string",
+     "acknowledgedBy": "integer",
+     "resolvedAt": "string",
+     "resolvedBy": "integer",
+     "monitorId": "integer"
+    },
+    "evidence": [
+     "openapi/_original/openstatus-openapi.yml#GET /incident",
+     "openapi/_original/openstatus-openapi.yml#GET /incident/{id}",
+     "openapi/_original/openstatus-openapi.yml#PUT /incident/{id}"
+    ]
+   },
+   "opsgenie": {
+    "segments": [
+     "incidents"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "tinyId": "string",
+     "message": "string",
+     "status": "string",
+     "tags": "array",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "priority": "string",
+     "ownerTeam": "string",
+     "responders": "array",
+     "impactedServices": "array",
+     "description": "string",
+     "details": "object"
+    },
+    "evidence": [
+     "openapi/_original/opsgenie-incident-openapi.yml#DELETE /v1/incidents/{identifier}",
+     "openapi/_original/opsgenie-incident-openapi.yml#GET /v1/incidents",
+     "openapi/_original/opsgenie-incident-openapi.yml#GET /v1/incidents/{identifier}"
+    ]
+   },
+   "pagerduty": {
+    "segments": [
+     "incidents"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT collection",
+     "PUT item"
+    ],
+    "properties": {
+     "first": "string",
+     "last": "string",
+     "limit": "integer",
+     "more": "boolean",
+     "order": "string",
+     "order_by": "string",
+     "filters": "object",
+     "time_zone": "string",
+     "data": "array",
+     "starting_after": "string",
+     "ending_before": "string",
+     "acknowledged_user_ids": "array",
+     "acknowledged_user_names": "array",
+     "acknowledgement_count": "integer",
+     "active_user_count": "integer",
+     "assigned_user_ids": "array",
+     "assigned_user_names": "array",
+     "assignment_count": "integer",
+     "auto_resolved": "boolean",
+     "business_hour_interruptions": "integer",
+     "created_at": "string",
+     "updated_at": "string",
+     "description": "string",
+     "engaged_seconds": "integer",
+     "engaged_user_count": "integer",
+     "escalation_count": "integer",
+     "escalation_policy_id": "string",
+     "escalation_policy_name": "string",
+     "id": "string",
+     "incident_number": "integer",
+     "joined_user_ids": "array",
+     "joined_user_names": "array",
+     "major": "boolean",
+     "manual_escalation_count": "integer",
+     "off_hour_interruptions": "integer",
+     "priority_id": "string",
+     "priority_name": "string",
+     "priority_order": "integer",
+     "reassignment_count": "integer",
+     "resolved_at": "string",
+     "resolved_by_user_id": "string",
+     "resolved_by_user_name": "string",
+     "seconds_to_engage": "integer",
+     "seconds_to_first_ack": "integer",
+     "seconds_to_mobilize": "integer",
+     "seconds_to_resolve": "integer",
+     "service_id": "string",
+     "service_name": "string",
+     "sleep_hour_interruptions": "integer",
+     "snoozed_seconds": "integer",
+     "status": "string",
+     "team_id": "string",
+     "team_name": "string",
+     "timeout_escalation_count": "integer",
+     "total_interruptions": "integer",
+     "total_notifications": "integer",
+     "urgency": "string",
+     "user_defined_effort_seconds": "integer",
+     "responder_id": "string",
+     "offset": "integer",
+     "total": "integer",
+     "title": "string",
+     "incident_key": "string",
+     "service": null,
+     "assignments": "array",
+     "assigned_via": "string",
+     "last_status_change_at": "string",
+     "first_trigger_log_entry": null,
+     "alert_counts": "object",
+     "is_mergeable": "boolean",
+     "escalation_policy": null,
+     "teams": "array",
+     "pending_actions": "array",
+     "acknowledgements": "array",
+     "alert_grouping": "object",
+     "last_status_change_by": null,
+     "priority": null,
+     "resolve_reason": "object",
+     "conference_bridge": null,
+     "incidents_responders": "array",
+     "responder_requests": "array",
+     "body": null,
+     "type": "string",
+     "resolution": "string",
+     "escalation_level": "integer"
+    },
+    "evidence": [
+     "openapi/_original/pagerduty-openapi-original.yml#GET /analytics/raw/incidents/{id}",
+     "openapi/_original/pagerduty-openapi-original.yml#GET /incidents",
+     "openapi/_original/pagerduty-openapi-original.yml#GET /incidents/{id}",
+     "openapi/_original/pagerduty-openapi-original.yml#POST /analytics/raw/incidents",
+     "openapi/_original/pagerduty-openapi-original.yml#POST /analytics/raw/responders/{responder_id}/incidents",
+     "openapi/_original/pagerduty-openapi-original.yml#POST /incidents",
+     "openapi/_original/pagerduty-openapi-original.yml#PUT /incidents",
+     "openapi/_original/pagerduty-openapi-original.yml#PUT /incidents/{id}"
+    ]
+   },
+   "phare": {
+    "segments": [
+     "incidents"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "POST item"
+    ],
+    "properties": {
+     "id": "integer",
+     "project_id": "integer",
+     "type": "string",
+     "slug": "string",
+     "impact": "string",
+     "state": "string",
+     "status": "string",
+     "title": "string",
+     "description": "string",
+     "exclude_from_downtime": "boolean",
+     "incident_at": "string",
+     "recovery_at": "string",
+     "monitors": "array",
+     "created_at": "string",
+     "updated_at": "string"
+    },
+    "evidence": [
+     "openapi/_original/phare-openapi.json#DELETE /uptime/incidents/{incidentId}",
+     "openapi/_original/phare-openapi.json#GET /uptime/incidents",
+     "openapi/_original/phare-openapi.json#GET /uptime/incidents/{incidentId}",
+     "openapi/_original/phare-openapi.json#POST /uptime/incidents",
+     "openapi/_original/phare-openapi.json#POST /uptime/incidents/{incidentId}"
+    ]
+   },
+   "spike-sh": {
+    "segments": [
+     "incidents",
+     "incident"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "_id": "string",
+     "counterId": "string",
+     "title": "string",
+     "status": "string",
+     "priority": "string",
+     "severity": "string",
+     "metadata": "object",
+     "escalation": "string",
+     "integration": "string",
+     "createdAt": "string",
+     "updatedAt": "string"
+    },
+    "evidence": [
+     "openapi/_original/spike-sh-openapi.yml#GET /api/status-page/{status_page_id}/incident/{incident_id}",
+     "openapi/_original/spike-sh-openapi.yml#GET /api/status-page/{status_page_id}/incidents",
+     "openapi/_original/spike-sh-openapi.yml#GET /incidents",
+     "openapi/_original/spike-sh-openapi.yml#GET /incidents/{counterId}",
+     "openapi/_original/spike-sh-openapi.yml#GET /services/{counterId}/incidents"
+    ]
+   },
+   "splunk-observability": {
+    "segments": [
+     "incident",
+     "incidents"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "active": "boolean",
+     "anomalyState": "string",
+     "detectLabel": "string",
+     "detectorId": "string",
+     "events": "array",
+     "incidentId": "string",
+     "severity": "string",
+     "duration": "integer",
+     "linkedTeams": "array"
+    },
+    "evidence": [
+     "openapi/_original/splunk-observability-detectors-openapi.yml#GET /detector/{id}/incidents",
+     "openapi/_original/splunk-observability-incidents-openapi.yml#GET /incident",
+     "openapi/_original/splunk-observability-incidents-openapi.yml#GET /incident/{id}"
+    ]
+   },
+   "squadcast": {
+    "segments": [
+     "incidents"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/squadcast-openapi.yml#GET /v3/incidents/{incidentID}"
+    ]
+   },
+   "statuspage": {
+    "segments": [
+     "incidents"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/statuspage-openapi.yml#DELETE /pages/{page_id}/incidents/{incident_id}",
+     "openapi/_original/statuspage-openapi.yml#GET /pages/{page_id}/incidents",
+     "openapi/_original/statuspage-openapi.yml#GET /pages/{page_id}/incidents/{incident_id}",
+     "openapi/_original/statuspage-openapi.yml#PATCH /pages/{page_id}/incidents/{incident_id}",
+     "openapi/_original/statuspage-openapi.yml#POST /pages/{page_id}/incidents"
+    ]
+   },
+   "uptime-com": {
+    "segments": [
+     "incidents"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "pk": "integer",
+     "name": "string",
+     "incident_type": "string",
+     "starts_at": "string",
+     "updates": "array",
+     "affected_components": "array"
+    },
+    "evidence": [
+     "openapi/_original/uptime-com-openapi.yml#GET /statuspages/{statuspage_pk}/incidents/",
+     "openapi/_original/uptime-com-openapi.yml#POST /statuspages/{statuspage_pk}/incidents/"
+    ]
+   },
+   "uptimerobot": {
+    "segments": [
+     "incidents"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "status": null,
+     "type": null,
+     "cause": "number",
+     "reason": "string",
+     "monitor": "object",
+     "commentsCount": "number",
+     "startedAt": null,
+     "resolvedAt": null,
+     "duration": "number",
+     "includeInReports": "boolean",
+     "rootCause": "object",
+     "title": "string",
+     "severity": "string",
+     "resolved": "boolean",
+     "updates": "array"
+    },
+    "evidence": [
+     "openapi/_original/uptimerobot-openapi.yaml#GET /incidents",
+     "openapi/_original/uptimerobot-openapi.yaml#GET /incidents/{id}",
+     "openapi/_original/uptimerobot-openapi.yaml#GET /monitors/{id}/dependency/incidents"
+    ]
+   },
+   "zenduty": {
+    "segments": [
+     "incidents"
+    ],
+    "operations": [
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "summary": "string",
+     "incident_number": "integer",
+     "creation_date": "string",
+     "status": "integer",
+     "unique_id": "string",
+     "service_object": "object",
+     "title": "string",
+     "incident_key": "string",
+     "service": "string",
+     "urgency": "integer",
+     "merged_with": "integer",
+     "assigned_to": "string",
+     "escalation_policy": "string",
+     "escalation_policy_object": "object",
+     "assigned_to_name": "string",
+     "resolved_date": "string",
+     "acknowledged_date": "string",
+     "context_window_start": "string",
+     "context_window_end": "string",
+     "tags": "array",
+     "sla": "string",
+     "sla_object": "object",
+     "team_priority": "string",
+     "team_priority_object": "object"
+    },
+    "evidence": [
+     "openapi/_original/zenduty-openapi.json#GET /api/incidents/{incident_number}/",
+     "openapi/_original/zenduty-openapi.json#PATCH /api/incidents/{unique_id}/",
+     "openapi/_original/zenduty-openapi.json#POST /api/incidents/"
+    ]
+   }
+  },
+  "incident_update": {
+   "betterstack": {
+    "segments": [
+     "timeline"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/betterstack-openapi.yml#GET /incidents/{id}/timeline"
+    ]
+   },
+   "checkly": {
+    "segments": [
+     "incident-updates",
+     "updates"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "status": "string",
+     "description": "string",
+     "id": "string",
+     "created_at": "string",
+     "updated_at": "string",
+     "incidentId": "string",
+     "publicIncidentUpdateDate": "string",
+     "notifySubscribers": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/checkly-public-api-openapi.json#DELETE /v1/incidents/{incidentId}/updates/{id}",
+     "openapi/_original/checkly-public-api-openapi.json#DELETE /v1/status-pages/incidents/{incidentId}/incident-updates/{incidentUpdateId}",
+     "openapi/_original/checkly-public-api-openapi.json#DELETE /v3/status-pages/{statusPageId}/incidents/{incidentId}/incident-updates/{incidentUpdateId}",
+     "openapi/_original/checkly-public-api-openapi.json#GET /v1/status-pages/incidents/{incidentId}/incident-updates",
+     "openapi/_original/checkly-public-api-openapi.json#GET /v1/status-pages/incidents/{incidentId}/incident-updates/{incidentUpdateId}",
+     "openapi/_original/checkly-public-api-openapi.json#GET /v3/status-pages/{statusPageId}/incidents/{incidentId}/incident-updates",
+     "openapi/_original/checkly-public-api-openapi.json#GET /v3/status-pages/{statusPageId}/incidents/{incidentId}/incident-updates/{incidentUpdateId}",
+     "openapi/_original/checkly-public-api-openapi.json#POST /v1/incidents/{incidentId}/updates",
+     "openapi/_original/checkly-public-api-openapi.json#POST /v1/status-pages/incidents/{incidentId}/incident-updates",
+     "openapi/_original/checkly-public-api-openapi.json#POST /v3/status-pages/{statusPageId}/incidents/{incidentId}/incident-updates",
+     "openapi/_original/checkly-public-api-openapi.json#PUT /v1/incidents/{incidentId}/updates/{id}",
+     "openapi/_original/checkly-public-api-openapi.json#PUT /v1/status-pages/incidents/{incidentId}/incident-updates/{incidentUpdateId}"
+    ]
+   },
+   "cisco-xdr": {
+    "segments": [
+     "events"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "confidence": "string",
+     "count": "integer",
+     "id": "string",
+     "observed_time": "object",
+     "type": "string",
+     "context": null,
+     "data": "object",
+     "external_ids": "array",
+     "external_references": "array",
+     "internal": "boolean",
+     "language": "string",
+     "revision": "integer",
+     "resolution": "string",
+     "sensor": "string",
+     "sensor_coordinates": "object",
+     "severity": "string",
+     "short_description": "string",
+     "source": "string",
+     "source_uri": "string",
+     "timestamp": "string",
+     "compacted_entities": "array",
+     "compacted_relations": "array",
+     "title": "string",
+     "tlp": "string",
+     "notability": "object",
+     "mitreData": "array",
+     "notable": "boolean",
+     "original": "boolean",
+     "indicators": "array",
+     "investigationId": "string",
+     "investigationShortDescription": "string",
+     "investigationSource": "string",
+     "targets": "array",
+     "relations": "array",
+     "observables": "array",
+     "tactics_and_techniques": "array",
+     "sightings": "array"
+    },
+    "evidence": [
+     "openapi/_original/cisco-xdr-incidents-investigations-openapi.json#GET /v1/incident/{incident-id}/events",
+     "openapi/_original/cisco-xdr-incidents-investigations-openapi.json#GET /v2/incident/{incident-id}/events",
+     "openapi/_original/cisco-xdr-incidents-investigations-openapi.json#GET /v3/incident/{incident-id}/events",
+     "openapi/_original/cisco-xdr-incidents-investigations-openapi.json#POST /v2/incident/{incident-id}/events"
+    ]
+   },
+   "firehydrant": {
+    "segments": [
+     "events",
+     "notes"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "incident_id": "string",
+     "type": "string",
+     "context": "string",
+     "data": "object",
+     "occurred_at": "string",
+     "visibility": "string",
+     "author": "object",
+     "votes": "object",
+     "conversations": "array",
+     "body": "string",
+     "created_at": "string",
+     "status_pages": "array"
+    },
+    "evidence": [
+     "openapi/_original/firehydrant-api-openapi.yml#DELETE /v1/incidents/{incident_id}/events/{event_id}",
+     "openapi/_original/firehydrant-api-openapi.yml#GET /v1/incidents/{incident_id}/events",
+     "openapi/_original/firehydrant-api-openapi.yml#GET /v1/incidents/{incident_id}/events/{event_id}",
+     "openapi/_original/firehydrant-api-openapi.yml#PATCH /v1/incidents/{incident_id}/events/{event_id}",
+     "openapi/_original/firehydrant-api-openapi.yml#PATCH /v1/incidents/{incident_id}/notes/{note_id}",
+     "openapi/_original/firehydrant-api-openapi.yml#POST /v1/incidents/{incident_id}/notes",
+     "openapi/_original/firehydrant-openapi.yml#GET /incidents/{incident_id}/events",
+     "openapi/_original/firehydrant-openapi.yml#POST /incidents/{incident_id}/notes"
+    ]
+   },
+   "hyperping": {
+    "segments": [
+     "updates"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "status": "string",
+     "message": "string",
+     "created_at": "string"
+    },
+    "evidence": [
+     "openapi/_original/hyperping-openapi.yml#POST /incidents/{incident_uuid}/updates"
+    ]
+   },
+   "incident-io": {
+    "segments": [
+     "incident_updates"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "incident_updates": "array",
+     "pagination_meta": "object",
+     "created_at": "string",
+     "id": "string",
+     "incident_id": "string",
+     "merged_into_incident_id": "string",
+     "message": "string",
+     "new_incident_status": "object",
+     "new_severity": "object",
+     "updater": "object",
+     "idempotency_key": "string",
+     "to_incident_status_id": "string",
+     "to_severity_id": "string"
+    },
+    "evidence": [
+     "openapi/_original/incident-io-openapi.json#GET /v2/incident_updates",
+     "openapi/_original/incident-io-openapi.json#POST /v2/incident_updates"
+    ]
+   },
+   "pagerduty": {
+    "segments": [
+     "notes",
+     "log_entries"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "offset": "integer",
+     "limit": "integer",
+     "more": "boolean",
+     "total": "integer",
+     "type": "string",
+     "created_at": "string",
+     "channel": "object",
+     "agent": null,
+     "note": "string",
+     "contexts": "array",
+     "service": null,
+     "incident": null,
+     "teams": "array",
+     "event_details": "object",
+     "acknowledgement_timeout": "integer",
+     "id": "string",
+     "user": null,
+     "content": "string"
+    },
+    "evidence": [
+     "openapi/_original/pagerduty-openapi-original.yml#GET /incidents/{id}/log_entries",
+     "openapi/_original/pagerduty-openapi-original.yml#GET /incidents/{id}/notes",
+     "openapi/_original/pagerduty-openapi-original.yml#POST /incidents/{id}/notes"
+    ]
+   },
+   "phare": {
+    "segments": [
+     "updates"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "POST item"
+    ],
+    "properties": {
+     "id": "integer",
+     "state": "string",
+     "content": "string",
+     "published_at": "string",
+     "creator": "object",
+     "created_at": "string",
+     "updated_at": "string"
+    },
+    "evidence": [
+     "openapi/_original/phare-openapi.json#DELETE /uptime/incidents/{incidentId}/updates/{incidentUpdateId}",
+     "openapi/_original/phare-openapi.json#GET /uptime/incidents/{incidentId}/updates",
+     "openapi/_original/phare-openapi.json#GET /uptime/incidents/{incidentId}/updates/{incidentUpdateId}",
+     "openapi/_original/phare-openapi.json#POST /uptime/incidents/{incidentId}/updates",
+     "openapi/_original/phare-openapi.json#POST /uptime/incidents/{incidentId}/updates/{incidentUpdateId}"
+    ]
+   },
+   "squadcast": {
+    "segments": [
+     "events"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/squadcast-openapi.yml#GET /v3/incidents/{incidentID}/events"
+    ]
+   },
+   "statuspage": {
+    "segments": [
+     "incident_updates"
+    ],
+    "operations": [
+     "PATCH item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/statuspage-openapi.yml#PATCH /pages/{page_id}/incidents/{incident_id}/incident_updates/{incident_update_id}"
+    ]
+   }
+  },
+  "service": {
+   "allquiet": {
+    "segments": [
+     "service"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "isProvisioned": "boolean",
+     "displayName": "string",
+     "publicTitle": "string",
+     "publicDescription": "string",
+     "templates": "array",
+     "integrations": "array",
+     "teamConnectionSettings": "object"
+    },
+    "evidence": [
+     "openapi/_original/allquiet-openapi.json#DELETE /api/public/v1/service/{id}",
+     "openapi/_original/allquiet-openapi.json#GET /api/public/v1/service/{id}",
+     "openapi/_original/allquiet-openapi.json#POST /api/public/v1/service",
+     "openapi/_original/allquiet-openapi.json#PUT /api/public/v1/service/{id}"
+    ]
+   },
+   "checkly": {
+    "segments": [
+     "services",
+     "components"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "length": "integer",
+     "entries": "array",
+     "nextId": "string",
+     "name": "string",
+     "id": "string",
+     "accountId": "string",
+     "created_at": "string",
+     "updated_at": "string",
+     "type": "string",
+     "description": "string",
+     "displayOrder": "integer",
+     "hidden": "boolean",
+     "parentId": "string",
+     "statusPageId": "string"
+    },
+    "evidence": [
+     "openapi/_original/checkly-public-api-openapi.json#DELETE /v1/status-pages/services/{serviceId}",
+     "openapi/_original/checkly-public-api-openapi.json#DELETE /v3/status-pages/{statusPageId}/components/{componentId}",
+     "openapi/_original/checkly-public-api-openapi.json#GET /v1/status-pages/services",
+     "openapi/_original/checkly-public-api-openapi.json#GET /v1/status-pages/services/{serviceId}",
+     "openapi/_original/checkly-public-api-openapi.json#GET /v3/status-pages/{statusPageId}/components",
+     "openapi/_original/checkly-public-api-openapi.json#GET /v3/status-pages/{statusPageId}/components/{componentId}",
+     "openapi/_original/checkly-public-api-openapi.json#POST /v1/status-pages/services",
+     "openapi/_original/checkly-public-api-openapi.json#POST /v3/status-pages/{statusPageId}/components",
+     "openapi/_original/checkly-public-api-openapi.json#PUT /v1/status-pages/services/{serviceId}",
+     "openapi/_original/checkly-public-api-openapi.json#PUT /v3/status-pages/{statusPageId}/components/{componentId}"
+    ]
+   },
+   "chronosphere": {
+    "segments": [
+     "services"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "page": "object",
+     "services": "array",
+     "slug": "string",
+     "name": "string",
+     "created_at": "string",
+     "updated_at": "string",
+     "derived_name": "string",
+     "team_slug": "string",
+     "description": "string",
+     "notification_policy_slug": "string",
+     "service": "object",
+     "dry_run": "boolean",
+     "create_if_missing": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/chronosphere-config-unstable-swagger.json#DELETE /api/unstable/config/services/{slug}",
+     "openapi/_original/chronosphere-config-unstable-swagger.json#GET /api/unstable/config/services",
+     "openapi/_original/chronosphere-config-unstable-swagger.json#GET /api/unstable/config/services/{slug}",
+     "openapi/_original/chronosphere-config-unstable-swagger.json#POST /api/unstable/config/services",
+     "openapi/_original/chronosphere-config-unstable-swagger.json#PUT /api/unstable/config/services/{slug}",
+     "openapi/_original/chronosphere-config-v1-openapi3.json#GET /api/v1/config/services",
+     "openapi/_original/chronosphere-config-v1-openapi3.json#GET /api/v1/config/services/{slug}",
+     "openapi/_original/chronosphere-openapi.yaml#GET /api/v1/config/services/{slug}",
+     "openapi/_original/chronosphere-openapi.yml#GET /api/v1/config/services/{slug}"
+    ]
+   },
+   "cronitor": {
+    "segments": [
+     "services"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/cronitor-openapi.json#GET /api/integrations/services"
+    ]
+   },
+   "cyware": {
+    "segments": [
+     "components"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "0": "object",
+     "1": "object",
+     "2": "object"
+    },
+    "evidence": [
+     "openapi/_original/cyware-intel-exchange-openapi.yml#GET /rest-auth/components/"
+    ]
+   },
+   "firehydrant": {
+    "segments": [
+     "services"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "description": "string",
+     "slug": "string",
+     "service_tier": "integer",
+     "created_at": "string",
+     "updated_at": "string",
+     "allowed_params": "array",
+     "labels": "object",
+     "alert_on_add": "boolean",
+     "auto_add_responding_team": "boolean",
+     "active_incidents": "array",
+     "checklists": "array",
+     "completed_checks": "integer",
+     "external_resources": "array",
+     "functionalities": "array",
+     "last_import": "object",
+     "links": "array",
+     "managed_by": "string",
+     "managed_by_settings": "object",
+     "owner": "object",
+     "service_checklist_updated_at": "string",
+     "teams": "array",
+     "updated_by": "object",
+     "remove_owner": "boolean",
+     "remove_remaining_checklists": "boolean",
+     "remove_remaining_external_resources": "boolean",
+     "remove_remaining_functionalities": "boolean",
+     "remove_remaining_teams": "boolean",
+     "signals_ical_url": "string",
+     "created_by": "object",
+     "in_support_hours": "boolean",
+     "slack_channel": "object",
+     "ms_teams_channel": "object",
+     "memberships": "array",
+     "owned_checklist_templates": "array",
+     "owned_functionalities": "array",
+     "owned_services": "array",
+     "owned_runbooks": "array",
+     "responding_services": "array",
+     "services": "array"
+    },
+    "evidence": [
+     "openapi/_original/firehydrant-api-openapi.yml#DELETE /v1/services/{service_id}",
+     "openapi/_original/firehydrant-api-openapi.yml#GET /v1/functionalities/{functionality_id}/services",
+     "openapi/_original/firehydrant-api-openapi.yml#GET /v1/services",
+     "openapi/_original/firehydrant-api-openapi.yml#GET /v1/services/{service_id}",
+     "openapi/_original/firehydrant-api-openapi.yml#GET /v1/users/{id}/services",
+     "openapi/_original/firehydrant-api-openapi.yml#PATCH /v1/services/{service_id}",
+     "openapi/_original/firehydrant-api-openapi.yml#POST /v1/services",
+     "openapi/_original/firehydrant-openapi.yml#DELETE /services/{service_id}",
+     "openapi/_original/firehydrant-openapi.yml#GET /services",
+     "openapi/_original/firehydrant-openapi.yml#GET /services/{service_id}",
+     "openapi/_original/firehydrant-openapi.yml#PATCH /services/{service_id}",
+     "openapi/_original/firehydrant-openapi.yml#POST /services"
+    ]
+   },
+   "gremlin": {
+    "segments": [
+     "services"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH collection",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "name": "string",
+     "description": "string",
+     "targetingStrategy": "object",
+     "applicationSelector": "object",
+     "statusCheckIds": "array",
+     "scheduleSettings": "object",
+     "tags": "object",
+     "multiSelectTags": "object",
+     "serviceOwner": "object",
+     "startBaselineRequest": "object",
+     "awsTargetsArn": "array",
+     "intelligentHealthCheckTargetIds": "array",
+     "enabledGremlinAwsStatusCheck": "boolean",
+     "originatingScenarioId": "string",
+     "serviceIds": "array",
+     "statusCheckIdsToAttach": "array",
+     "autoCreatingJiraTicketsEnabled": "boolean",
+     "defaultJiraIssueFields": "object",
+     "loadGenerators": "array"
+    },
+    "evidence": [
+     "openapi/_original/gremlin-openapi.yml#DELETE /services/{serviceId}",
+     "openapi/_original/gremlin-openapi.yml#GET /jira/issues/services",
+     "openapi/_original/gremlin-openapi.yml#GET /pagerduty/services",
+     "openapi/_original/gremlin-openapi.yml#GET /reliability-management/services/{serviceId}",
+     "openapi/_original/gremlin-openapi.yml#GET /reports/companies/reliability-management/services",
+     "openapi/_original/gremlin-openapi.yml#GET /services",
+     "openapi/_original/gremlin-openapi.yml#GET /services/{serviceId}",
+     "openapi/_original/gremlin-openapi.yml#PATCH /services",
+     "openapi/_original/gremlin-openapi.yml#PATCH /services/{serviceId}",
+     "openapi/_original/gremlin-openapi.yml#POST /services"
+    ]
+   },
+   "ilert": {
+    "segments": [
+     "services"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "number",
+     "name": "string",
+     "alias": "string",
+     "status": "string",
+     "description": "string",
+     "oneOpenIncidentOnly": "boolean",
+     "showUptimeHistory": "boolean",
+     "teams": "array",
+     "subscribed": "boolean",
+     "uptime": "object",
+     "incidents": "array"
+    },
+    "evidence": [
+     "openapi/_original/ilert-ilert-rest-api-openapi.yml#DELETE /services/{id}",
+     "openapi/_original/ilert-ilert-rest-api-openapi.yml#GET /services",
+     "openapi/_original/ilert-ilert-rest-api-openapi.yml#GET /services/{id}",
+     "openapi/_original/ilert-ilert-rest-api-openapi.yml#POST /services",
+     "openapi/_original/ilert-ilert-rest-api-openapi.yml#PUT /services/{id}"
+    ]
+   },
+   "nagios": {
+    "segments": [
+     "service",
+     "services"
+    ],
+    "operations": [
+     "DELETE collection",
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "recordcount": "integer",
+     "service": "array",
+     "success": "string"
+    },
+    "evidence": [
+     "openapi/_original/nagios-xi-openapi.yml#DELETE /config/service",
+     "openapi/_original/nagios-xi-openapi.yml#GET /objects/service",
+     "openapi/_original/nagios-xi-openapi.yml#POST /config/service",
+     "openapi/_original/ncpa-openapi.yml#GET /services"
+    ]
+   },
+   "opsgenie": {
+    "segments": [
+     "services"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "description": "string",
+     "teamId": "string",
+     "visibility": "string",
+     "tags": "array",
+     "isExternal": "boolean",
+     "result": "string",
+     "took": "number",
+     "requestId": "string"
+    },
+    "evidence": [
+     "openapi/_original/opsgenie-service-openapi.yml#DELETE /v1/services/{identifier}",
+     "openapi/_original/opsgenie-service-openapi.yml#GET /v1/services",
+     "openapi/_original/opsgenie-service-openapi.yml#GET /v1/services/{identifier}",
+     "openapi/_original/opsgenie-service-openapi.yml#PATCH /v1/services/{identifier}",
+     "openapi/_original/opsgenie-service-openapi.yml#POST /v1/services"
+    ]
+   },
+   "pagerduty": {
+    "segments": [
+     "services",
+     "business_services"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "mean_assignment_count": "integer",
+     "mean_engaged_seconds": "integer",
+     "mean_engaged_user_count": "integer",
+     "mean_seconds_to_engage": "integer",
+     "mean_seconds_to_first_ack": "integer",
+     "mean_seconds_to_mobilize": "integer",
+     "mean_seconds_to_resolve": "integer",
+     "mean_user_defined_engaged_seconds": "integer",
+     "range_start": "string",
+     "service_id": "string",
+     "service_name": "string",
+     "team_id": "string",
+     "team_name": "string",
+     "total_business_hour_interruptions": "integer",
+     "total_engaged_seconds": "integer",
+     "total_escalation_count": "integer",
+     "total_incident_count": "integer",
+     "total_incidents_acknowledged": "integer",
+     "total_incidents_auto_resolved": null,
+     "total_incidents_manual_escalated": "integer",
+     "total_incidents_reassigned": "integer",
+     "total_incidents_timeout_escalated": "integer",
+     "total_interruptions": "integer",
+     "total_notifications": "integer",
+     "total_off_hour_interruptions": "integer",
+     "total_sleep_hour_interruptions": "integer",
+     "total_snoozed_seconds": "integer",
+     "total_user_defined_engaged_seconds": "integer",
+     "up_time_pct": "number",
+     "filters": "object",
+     "time_zone": "string",
+     "order": "string",
+     "order_by": "string",
+     "aggregate_unit": "string",
+     "services": "array",
+     "service": null,
+     "offset": "integer",
+     "limit": "integer",
+     "more": "boolean",
+     "total": "integer",
+     "name": "string",
+     "description": "string",
+     "point_of_contact": "string",
+     "team": "object",
+     "migrated_at": "string",
+     "migrated_by": "object",
+     "migrated_from": "object",
+     "migrated_status": "string",
+     "migrated_via": "string",
+     "type": null,
+     "parent": "object",
+     "sets": "array",
+     "catch_all": "object",
+     "warnings": "array",
+     "trigger_type_name": "string",
+     "trigger_type": "string",
+     "condition": "string",
+     "trigger_url": "string",
+     "workflow": "object",
+     "is_subscribed_to_all_services": "boolean",
+     "permissions": "object",
+     "supporting_service": "object",
+     "dependent_service": "object",
+     "id": "string",
+     "auto_resolve_timeout": "integer",
+     "acknowledgement_timeout": "integer",
+     "created_at": "string",
+     "status": "string",
+     "last_incident_timestamp": "string",
+     "escalation_policy": null,
+     "response_play": null,
+     "teams": "array",
+     "integrations": "array",
+     "incident_urgency_rule": null,
+     "support_hours": "object",
+     "scheduled_actions": "array",
+     "addons": "array",
+     "alert_creation": "string",
+     "alert_grouping_parameters": "object",
+     "alert_grouping": "string",
+     "alert_grouping_timeout": "integer",
+     "auto_pause_notifications_parameters": "object",
+     "self": "string",
+     "status_page": "object",
+     "business_service": "object"
+    },
+    "evidence": [
+     "openapi/_original/pagerduty-openapi-original.yml#DELETE /automation_actions/actions/{id}/services/{service_id}",
+     "openapi/_original/pagerduty-openapi-original.yml#DELETE /business_services/{id}",
+     "openapi/_original/pagerduty-openapi-original.yml#DELETE /incident_workflows/triggers/{trigger_id}/services/{service_id}",
+     "openapi/_original/pagerduty-openapi-original.yml#DELETE /services/{id}",
+     "openapi/_original/pagerduty-openapi-original.yml#GET /automation_actions/actions/{id}/services",
+     "openapi/_original/pagerduty-openapi-original.yml#GET /automation_actions/actions/{id}/services/{service_id}",
+     "openapi/_original/pagerduty-openapi-original.yml#GET /business_services",
+     "openapi/_original/pagerduty-openapi-original.yml#GET /business_services/{id}",
+     "openapi/_original/pagerduty-openapi-original.yml#GET /event_orchestrations/services/{service_id}",
+     "openapi/_original/pagerduty-openapi-original.yml#GET /service_dependencies/business_services/{id}",
+     "openapi/_original/pagerduty-openapi-original.yml#GET /services",
+     "openapi/_original/pagerduty-openapi-original.yml#GET /services/{id}"
+    ]
+   },
+   "signoz": {
+    "segments": [
+     "services"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "PUT item"
+    ],
+    "properties": {
+     "config": "object",
+     "enabled": "boolean",
+     "icon": "string",
+     "id": "string",
+     "title": "string",
+     "assets": "object",
+     "cloudIntegrationService": "object",
+     "dataCollected": "object",
+     "overview": "string",
+     "supportedSignals": "object",
+     "telemetryCollectionStrategy": "object"
+    },
+    "evidence": [
+     "openapi/_original/signoz-openapi.yml#GET /api/v1/cloud_integrations/{cloud_provider}/services",
+     "openapi/_original/signoz-openapi.yml#GET /api/v1/cloud_integrations/{cloud_provider}/services/{service_id}",
+     "openapi/_original/signoz-openapi.yml#PUT /api/v1/cloud_integrations/{cloud_provider}/accounts/{id}/services/{service_id}"
+    ]
+   },
+   "sorry": {
+    "segments": [
+     "components"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "state": "string",
+     "name": "string",
+     "description": "string",
+     "position": "integer",
+     "parent_id": "integer",
+     "created_at": "string",
+     "updated_at": "string"
+    },
+    "evidence": [
+     "openapi/_original/sorry-status-page-openapi.yml#DELETE /pages/{page_id}/components/{component_id}",
+     "openapi/_original/sorry-status-page-openapi.yml#GET /pages/{page_id}/components",
+     "openapi/_original/sorry-status-page-openapi.yml#GET /pages/{page_id}/components/{component_id}",
+     "openapi/_original/sorry-status-page-openapi.yml#PATCH /pages/{page_id}/components/{component_id}",
+     "openapi/_original/sorry-status-page-openapi.yml#POST /pages/{page_id}/components"
+    ]
+   },
+   "spike-sh": {
+    "segments": [
+     "services",
+     "component"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "_id": "string",
+     "counterId": "string",
+     "name": "string",
+     "desc": "string",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "status": "string",
+     "private": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/spike-sh-openapi.yml#GET /api/status-page/{status_page_id}/component",
+     "openapi/_original/spike-sh-openapi.yml#GET /api/status-page/{status_page_id}/component/{component_id}",
+     "openapi/_original/spike-sh-openapi.yml#GET /services",
+     "openapi/_original/spike-sh-openapi.yml#GET /services/{counterId}"
+    ]
+   },
+   "statuspage": {
+    "segments": [
+     "components"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/statuspage-openapi.yml#DELETE /pages/{page_id}/components/{component_id}",
+     "openapi/_original/statuspage-openapi.yml#GET /pages/{page_id}/components",
+     "openapi/_original/statuspage-openapi.yml#GET /pages/{page_id}/components/{component_id}",
+     "openapi/_original/statuspage-openapi.yml#PATCH /pages/{page_id}/components/{component_id}",
+     "openapi/_original/statuspage-openapi.yml#POST /pages/{page_id}/components"
+    ]
+   },
+   "uptime-com": {
+    "segments": [
+     "components"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "pk": "integer",
+     "name": "string",
+     "description": "string",
+     "group": "boolean",
+     "is_group": "boolean",
+     "auto_status_down": "string",
+     "service": "integer"
+    },
+    "evidence": [
+     "openapi/_original/uptime-com-openapi.yml#GET /statuspages/{statuspage_pk}/components/",
+     "openapi/_original/uptime-com-openapi.yml#POST /statuspages/{statuspage_pk}/components/"
+    ]
+   },
+   "zenduty": {
+    "segments": [
+     "services"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "name": "string",
+     "creation date": "string",
+     "summary": "string",
+     "description": "string",
+     "unique_id": "string",
+     "auto_resolve_timeout": "integer",
+     "created_by": "string",
+     "team_priority": "string",
+     "task_template": "string",
+     "acknowlegement_timeout": "integer",
+     "status": "integer",
+     "escalation_policy": "string",
+     "team": "string",
+     "sla": "string",
+     "under_maintenance": "boolean",
+     "collation": "integer",
+     "collation_time": "integer",
+     "acknowledgement_timeout_enabled": "boolean",
+     "acknowledgement_timeout": "integer"
+    },
+    "evidence": [
+     "openapi/_original/zenduty-openapi.json#DELETE /api/account/teams/{team_id}/services/{service_id}/",
+     "openapi/_original/zenduty-openapi.json#GET /api/account/teams/{team_id}/services/{service_id}/",
+     "openapi/_original/zenduty-openapi.json#GET /api/account/teams/{}/services/",
+     "openapi/_original/zenduty-openapi.json#POST /api/account/teams/{}/services/",
+     "openapi/_original/zenduty-openapi.json#PUT /api/account/teams/{team_id}/services/{service_id}/"
+    ]
+   }
+  },
+  "on_call_schedule": {
+   "airmdr": {
+    "segments": [
+     "schedule"
+    ],
+    "operations": [
+     "DELETE collection",
+     "PATCH collection",
+     "POST collection"
+    ],
+    "properties": {
+     "schedule_id": "string",
+     "success": "boolean",
+     "schedule": "object",
+     "error": "string",
+     "name": "string",
+     "organization_id": "string",
+     "frequency": "string",
+     "recurrence": "object",
+     "recipients": "array",
+     "is_enabled": "boolean",
+     "schedule_ids": "array"
+    },
+    "evidence": [
+     "openapi/_original/airmdr-case-manager-openapi.json#DELETE /v2/dashboard/{dashboard_id}/schedule",
+     "openapi/_original/airmdr-case-manager-openapi.json#PATCH /v2/dashboard/{dashboard_id}/schedule",
+     "openapi/_original/airmdr-case-manager-openapi.json#POST /v2/dashboard/{dashboard_id}/schedule",
+     "openapi/_original/airmdr-case-manager-openapi.yml#DELETE /v2/dashboard/{dashboard_id}/schedule",
+     "openapi/_original/airmdr-case-manager-openapi.yml#PATCH /v2/dashboard/{dashboard_id}/schedule",
+     "openapi/_original/airmdr-case-manager-openapi.yml#POST /v2/dashboard/{dashboard_id}/schedule"
+    ]
+   },
+   "cisco-xdr": {
+    "segments": [
+     "schedules"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "base_type": "string",
+     "created_by": "string",
+     "created_on": "string",
+     "description": "string",
+     "id": "string",
+     "name": "string",
+     "owner": "string",
+     "rule_id": "string",
+     "schema_id": "string",
+     "type": "string",
+     "unique_name": "string",
+     "updated_by": "string",
+     "updated_on": "string",
+     "properties": "object"
+    },
+    "evidence": [
+     "openapi/_original/cisco-xdr-automation-openapi.json#DELETE /v1/schedules/{schedule_id}",
+     "openapi/_original/cisco-xdr-automation-openapi.json#GET /v1/schedules",
+     "openapi/_original/cisco-xdr-automation-openapi.json#GET /v1/schedules/{schedule_id}",
+     "openapi/_original/cisco-xdr-automation-openapi.json#POST /v1/schedules",
+     "openapi/_original/cisco-xdr-automation-openapi.json#PUT /v1/schedules/{schedule_id}"
+    ]
+   },
+   "everbridge": {
+    "segments": [
+     "schedules"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "status": "string",
+     "name": "string",
+     "description": "string",
+     "initialNextFireTime": "string",
+     "nextFiredTime": "string",
+     "lastFiredTime": "string",
+     "lastFiredResult": "object",
+     "scheduleConfig": "object",
+     "commsPayload": "object",
+     "created": "string",
+     "createdBy": "string",
+     "createdByName": "string",
+     "updated": "string",
+     "updatedBy": "string",
+     "updatedByName": "string"
+    },
+    "evidence": [
+     "openapi/_original/everbridge-communications-openapi.json#DELETE /schedules/{id}",
+     "openapi/_original/everbridge-communications-openapi.json#GET /schedules",
+     "openapi/_original/everbridge-communications-openapi.json#GET /schedules/{id}",
+     "openapi/_original/everbridge-communications-openapi.json#PATCH /schedules/{id}",
+     "openapi/_original/everbridge-communications-openapi.json#POST /schedules"
+    ]
+   },
+   "firehydrant": {
+    "segments": [
+     "schedules"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "integration": "string",
+     "discarded": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/firehydrant-api-openapi.yml#GET /v1/schedules"
+    ]
+   },
+   "gremlin": {
+    "segments": [
+     "schedules"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "orgId": "string",
+     "guid": "string",
+     "scenarioId": "string",
+     "scenarioName": "string",
+     "trigger": "object",
+     "createdBy": "string",
+     "createSource": "string",
+     "triggerSource": "string",
+     "enabled": "boolean",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "nextTriggerTime": "string",
+     "targets": "array",
+     "failureFlagTargets": "array",
+     "command": "object",
+     "target": "object",
+     "attackConfiguration": "object"
+    },
+    "evidence": [
+     "openapi/_original/gremlin-openapi.yml#DELETE /schedules/{guid}",
+     "openapi/_original/gremlin-openapi.yml#GET /scenarios/{guid}/schedules",
+     "openapi/_original/gremlin-openapi.yml#GET /schedules/{guid}",
+     "openapi/_original/gremlin-openapi.yml#POST /schedules"
+    ]
+   },
+   "ilert": {
+    "segments": [
+     "schedules",
+     "on-calls"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string",
+     "timezone": "string",
+     "type": "string",
+     "scheduleLayers": "array",
+     "shifts": "array",
+     "showGaps": "boolean",
+     "defaultShiftDuration": "string",
+     "currentShift": "object",
+     "nextShift": "object",
+     "teams": "array",
+     "user": "object",
+     "escalationPolicy": "object",
+     "schedule": "object",
+     "start": "string",
+     "end": "string",
+     "escalationLevel": "number"
+    },
+    "evidence": [
+     "openapi/_original/ilert-ilert-rest-api-openapi.yml#DELETE /schedules/{id}",
+     "openapi/_original/ilert-ilert-rest-api-openapi.yml#GET /on-calls",
+     "openapi/_original/ilert-ilert-rest-api-openapi.yml#GET /schedules",
+     "openapi/_original/ilert-ilert-rest-api-openapi.yml#GET /schedules/{id}",
+     "openapi/_original/ilert-ilert-rest-api-openapi.yml#POST /schedules",
+     "openapi/_original/ilert-ilert-rest-api-openapi.yml#PUT /schedules/{id}"
+    ]
+   },
+   "incident-io": {
+    "segments": [
+     "schedules"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "pagination_meta": "object",
+     "schedules": "array",
+     "annotations": "object",
+     "config": "object",
+     "created_at": "string",
+     "current_shifts": "array",
+     "holidays_public_config": "object",
+     "id": "string",
+     "name": "string",
+     "next_shifts": "array",
+     "permalink": "string",
+     "team_ids": "array",
+     "timezone": "string",
+     "updated_at": "string"
+    },
+    "evidence": [
+     "openapi/_original/incident-io-openapi.json#DELETE /v2/schedules/{id}",
+     "openapi/_original/incident-io-openapi.json#GET /v2/schedules",
+     "openapi/_original/incident-io-openapi.json#GET /v2/schedules/{id}",
+     "openapi/_original/incident-io-openapi.json#POST /v2/schedules",
+     "openapi/_original/incident-io-openapi.json#PUT /v2/schedules/{id}"
+    ]
+   },
+   "kibana": {
+    "segments": [
+     "schedules"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "actions": "array",
+     "created_at": "string",
+     "created_by": "string",
+     "enabled": "boolean",
+     "id": "string",
+     "last_execution": "object",
+     "name": "string",
+     "params": "object",
+     "schedule": "object",
+     "updated_at": "string",
+     "updated_by": "string"
+    },
+    "evidence": [
+     "openapi/_original/kibana-openapi-original.yml#DELETE /api/attack_discovery/schedules/{id}",
+     "openapi/_original/kibana-openapi-original.yml#GET /api/attack_discovery/schedules/{id}",
+     "openapi/_original/kibana-openapi-original.yml#POST /api/attack_discovery/schedules",
+     "openapi/_original/kibana-openapi-original.yml#PUT /api/attack_discovery/schedules/{id}"
+    ]
+   },
+   "moogsoft": {
+    "segments": [
+     "schedules"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "name": "string",
+     "description": "string",
+     "user_groups": "array",
+     "users": "array",
+     "rotation": "object",
+     "handoff": "object",
+     "start": "integer",
+     "timezone": "string",
+     "restrictions": "array",
+     "id": "string",
+     "on_call": "string",
+     "created": "integer",
+     "last_updated": "integer",
+     "created_by": "string",
+     "last_updated_by": "string"
+    },
+    "evidence": [
+     "openapi/_original/moogsoft-incident-responder-openapi.yaml#DELETE /v1/on-call/schedules/{id}",
+     "openapi/_original/moogsoft-incident-responder-openapi.yaml#GET /v1/on-call/schedules",
+     "openapi/_original/moogsoft-incident-responder-openapi.yaml#GET /v1/on-call/schedules/{id}",
+     "openapi/_original/moogsoft-incident-responder-openapi.yaml#PATCH /v1/on-call/schedules/{id}",
+     "openapi/_original/moogsoft-incident-responder-openapi.yaml#POST /v1/on-call/schedules"
+    ]
+   },
+   "opsgenie": {
+    "segments": [
+     "schedules"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "description": "string",
+     "timezone": "string",
+     "enabled": "boolean",
+     "ownerTeam": "object",
+     "rotations": "array",
+     "result": "string",
+     "took": "number",
+     "requestId": "string"
+    },
+    "evidence": [
+     "openapi/_original/opsgenie-schedule-openapi.yml#DELETE /v2/schedules/{identifier}",
+     "openapi/_original/opsgenie-schedule-openapi.yml#GET /v2/schedules",
+     "openapi/_original/opsgenie-schedule-openapi.yml#GET /v2/schedules/{identifier}",
+     "openapi/_original/opsgenie-schedule-openapi.yml#PATCH /v2/schedules/{identifier}",
+     "openapi/_original/opsgenie-schedule-openapi.yml#POST /v2/schedules",
+     "openapi/_original/opsgenie-user-openapi.yml#GET /v2/users/{identifier}/schedules"
+    ]
+   },
+   "pagerduty": {
+    "segments": [
+     "schedules",
+     "oncalls"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "offset": "integer",
+     "limit": "integer",
+     "more": "boolean",
+     "total": "integer",
+     "escalation_policy": null,
+     "user": null,
+     "schedule": null,
+     "escalation_level": "integer",
+     "start": "string",
+     "end": "string",
+     "type": "string",
+     "schedule_layers": "array",
+     "time_zone": "string",
+     "name": "string",
+     "description": "string",
+     "final_schedule": "object",
+     "overrides_subschedule": "object",
+     "escalation_policies": "array",
+     "users": "array",
+     "teams": "array"
+    },
+    "evidence": [
+     "openapi/_original/pagerduty-openapi-original.yml#DELETE /schedules/{id}",
+     "openapi/_original/pagerduty-openapi-original.yml#GET /oncalls",
+     "openapi/_original/pagerduty-openapi-original.yml#GET /schedules",
+     "openapi/_original/pagerduty-openapi-original.yml#GET /schedules/{id}",
+     "openapi/_original/pagerduty-openapi-original.yml#POST /schedules",
+     "openapi/_original/pagerduty-openapi-original.yml#PUT /schedules/{id}"
+    ]
+   },
+   "sciencelogic": {
+    "segments": [
+     "schedules",
+     "schedule"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "offset": "integer",
+     "limit": "integer",
+     "total": "integer",
+     "search": "object",
+     "sort": "array",
+     "data": "array",
+     "ID": "integer",
+     "CommandName": "string",
+     "CommandID": "integer",
+     "DeviceIDs": "array",
+     "DeviceNames": "string",
+     "Type": "string",
+     "Schedule": "string",
+     "NextRun": "string",
+     "KeepLast": "integer",
+     "EmailAddress": "string",
+     "PolicyName": "string",
+     "PolicyID": "integer",
+     "ConcatenateMultiple": "boolean",
+     "LogTranscript": "boolean",
+     "Variables": "array",
+     "DomainID": "integer",
+     "SplitOutputEmails": "boolean",
+     "CreatedBy": "integer",
+     "UpdatedCount": "integer",
+     "SpreadAcross": "string",
+     "RetainVersions": "integer",
+     "StartHour": "integer",
+     "EndHour": "integer",
+     "StartDayOfWeek": "string",
+     "EndDayOfWeek": "string",
+     "StartDayOfMonth": "integer",
+     "EndDayOfMonth": "integer",
+     "fields": "array",
+     "Cron": "string",
+     "FileserverID": "integer",
+     "Emails": "array",
+     "EmailText": "string",
+     "ReportsFormat": "string",
+     "Encoding": "string",
+     "ReportsIDs": "array",
+     "LastRun": "string",
+     "Created": "string",
+     "CreatedByUsername": "string",
+     "NextDue": "string"
+    },
+    "evidence": [
+     "openapi/_original/sciencelogic-skylar-compliance-openapi.json#DELETE /commands/{id}/schedules/{schedule_id}",
+     "openapi/_original/sciencelogic-skylar-compliance-openapi.json#DELETE /reports/schedules/{id}",
+     "openapi/_original/sciencelogic-skylar-compliance-openapi.json#GET /commands/schedules",
+     "openapi/_original/sciencelogic-skylar-compliance-openapi.json#GET /commands/{id}/schedules",
+     "openapi/_original/sciencelogic-skylar-compliance-openapi.json#GET /commands/{id}/schedules/{schedule_id}",
+     "openapi/_original/sciencelogic-skylar-compliance-openapi.json#GET /reports/schedules",
+     "openapi/_original/sciencelogic-skylar-compliance-openapi.json#GET /reports/schedules/{id}",
+     "openapi/_original/sciencelogic-skylar-compliance-openapi.json#GET /schedules",
+     "openapi/_original/sciencelogic-skylar-compliance-openapi.json#POST /commands/{id}/schedules",
+     "openapi/_original/sciencelogic-skylar-compliance-openapi.json#POST /devices/bulk/schedule",
+     "openapi/_original/sciencelogic-skylar-compliance-openapi.json#POST /reports/schedules",
+     "openapi/_original/sciencelogic-skylar-compliance-openapi.json#PUT /commands/{id}/schedules/{schedule_id}"
+    ]
+   },
+   "spike-sh": {
+    "segments": [
+     "on-calls"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "name": "string",
+     "users": "array",
+     "rotation": "object",
+     "timezone": "string",
+     "description": "string",
+     "layers": "array",
+     "_id": "string",
+     "createdAt": "string",
+     "teamId": "string"
+    },
+    "evidence": [
+     "openapi/_original/spike-sh-openapi.yml#GET /on-calls",
+     "openapi/_original/spike-sh-openapi.yml#GET /on-calls/{oncallId}",
+     "openapi/_original/spike-sh-openapi.yml#POST /on-calls",
+     "openapi/_original/spike-sh-openapi.yml#PUT /on-calls/{oncallId}"
+    ]
+   },
+   "zenduty": {
+    "segments": [
+     "schedules",
+     "oncall"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "name": "string",
+     "summary": "string",
+     "description": "string",
+     "time_zone": "string",
+     "team": "string",
+     "layers": "array",
+     "overrides": "array",
+     "unique_id": "string",
+     "escalation_policy": "object",
+     "user": "object",
+     "oncalls": "array"
+    },
+    "evidence": [
+     "openapi/_original/zenduty-openapi.json#DELETE /api/account/teams/{team_id}/schedules/{schedule_id}/",
+     "openapi/_original/zenduty-openapi.json#GET /api/account/teams/{team_id}/oncall/",
+     "openapi/_original/zenduty-openapi.json#GET /api/account/teams/{team_id}/schedules/{schedule_id}/",
+     "openapi/_original/zenduty-openapi.json#GET /api/account/teams/{}/schedules/",
+     "openapi/_original/zenduty-openapi.json#GET /api/v2/account/teams/{team_id}/escalation_policies/{ep_id}/oncall/",
+     "openapi/_original/zenduty-openapi.json#GET /api/v2/account/teams/{team_id}/oncall/",
+     "openapi/_original/zenduty-openapi.json#GET /api/v2/account/teams/{team_id}/services/{service_id}/oncall/",
+     "openapi/_original/zenduty-openapi.json#POST /api/account/teams/{}/schedules/",
+     "openapi/_original/zenduty-openapi.json#PUT /api/account/teams/{team_id}/schedules/{schedule_id}/"
+    ]
+   }
+  },
+  "escalation_policy": {
+   "firehydrant": {
+    "segments": [
+     "escalation_policies"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "name": "string",
+     "description": "string",
+     "repetitions": "integer",
+     "default": "boolean",
+     "steps": "array",
+     "handoff_step": "object"
+    },
+    "evidence": [
+     "openapi/_original/firehydrant-api-openapi.yml#DELETE /v1/teams/{team_id}/escalation_policies/{id}",
+     "openapi/_original/firehydrant-api-openapi.yml#GET /v1/teams/{team_id}/escalation_policies",
+     "openapi/_original/firehydrant-api-openapi.yml#GET /v1/teams/{team_id}/escalation_policies/{id}",
+     "openapi/_original/firehydrant-api-openapi.yml#PATCH /v1/teams/{team_id}/escalation_policies/{id}",
+     "openapi/_original/firehydrant-api-openapi.yml#POST /v1/teams/{team_id}/escalation_policies"
+    ]
+   },
+   "ilert": {
+    "segments": [
+     "escalation-policies"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string",
+     "escalationRules": "array",
+     "teams": "array",
+     "repeating": "boolean",
+     "frequency": "integer",
+     "delayMin": "integer",
+     "routingKey": "string"
+    },
+    "evidence": [
+     "openapi/_original/ilert-ilert-rest-api-openapi.yml#DELETE /escalation-policies/{id}",
+     "openapi/_original/ilert-ilert-rest-api-openapi.yml#GET /escalation-policies",
+     "openapi/_original/ilert-ilert-rest-api-openapi.yml#GET /escalation-policies/{id}",
+     "openapi/_original/ilert-ilert-rest-api-openapi.yml#POST /escalation-policies",
+     "openapi/_original/ilert-ilert-rest-api-openapi.yml#PUT /escalation-policies/{id}"
+    ]
+   },
+   "incident-io": {
+    "segments": [
+     "escalations"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "escalations": "array",
+     "pagination_meta": "object",
+     "created_at": "string",
+     "creator": "object",
+     "description": "string",
+     "escalation_path_id": "string",
+     "events": "array",
+     "id": "string",
+     "priority": "object",
+     "related_alerts": "array",
+     "related_incidents": "array",
+     "status": "string",
+     "title": "string",
+     "updated_at": "string",
+     "idempotency_key": "string",
+     "incident_id": "string",
+     "user_ids": "array"
+    },
+    "evidence": [
+     "openapi/_original/incident-io-openapi.json#GET /v2/escalations",
+     "openapi/_original/incident-io-openapi.json#GET /v2/escalations/{id}",
+     "openapi/_original/incident-io-openapi.json#POST /v2/escalations"
+    ]
+   },
+   "opsgenie": {
+    "segments": [
+     "escalations"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "description": "string",
+     "ownerTeam": "object",
+     "rules": "array",
+     "repeat": "object",
+     "result": "string",
+     "took": "number",
+     "requestId": "string"
+    },
+    "evidence": [
+     "openapi/_original/opsgenie-escalation-openapi.yml#DELETE /v2/escalations/{identifier}",
+     "openapi/_original/opsgenie-escalation-openapi.yml#GET /v2/escalations",
+     "openapi/_original/opsgenie-escalation-openapi.yml#GET /v2/escalations/{identifier}",
+     "openapi/_original/opsgenie-escalation-openapi.yml#PATCH /v2/escalations/{identifier}",
+     "openapi/_original/opsgenie-escalation-openapi.yml#POST /v2/escalations",
+     "openapi/_original/opsgenie-user-openapi.yml#GET /v2/users/{identifier}/escalations"
+    ]
+   },
+   "pagerduty": {
+    "segments": [
+     "escalation_policies"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "distinct_responder_count": "integer",
+     "escalation_policy_id": "string",
+     "escalation_policy_name": "string",
+     "mean_assignment_count": "integer",
+     "mean_engaged_seconds": "integer",
+     "mean_engaged_user_count": "integer",
+     "mean_seconds_to_engage": "integer",
+     "mean_seconds_to_first_ack": "integer",
+     "mean_seconds_to_mobilize": "integer",
+     "mean_seconds_to_resolve": "integer",
+     "mean_user_defined_engaged_seconds": "integer",
+     "range_start": "string",
+     "team_id": "string",
+     "team_name": "string",
+     "total_business_hour_interruptions": "integer",
+     "total_engaged_seconds": "integer",
+     "total_escalation_count": "integer",
+     "total_incident_count": "integer",
+     "total_incidents_acknowledged": "integer",
+     "total_incidents_auto_resolved": null,
+     "total_incidents_manual_escalated": "integer",
+     "total_incidents_reassigned": "integer",
+     "total_incidents_timeout_escalated": "integer",
+     "total_interruptions": "integer",
+     "total_notifications": "integer",
+     "total_off_hour_interruptions": "integer",
+     "total_sleep_hour_interruptions": "integer",
+     "total_snoozed_seconds": "integer",
+     "total_user_defined_engaged_seconds": "integer",
+     "up_time_pct": "number",
+     "filters": "object",
+     "time_zone": "string",
+     "order": "string",
+     "order_by": "string",
+     "aggregate_unit": "string",
+     "offset": "integer",
+     "limit": "integer",
+     "more": "boolean",
+     "total": "integer",
+     "type": "string",
+     "name": "string",
+     "description": "string",
+     "num_loops": "integer",
+     "on_call_handoff_notifications": "string",
+     "escalation_rules": "array",
+     "services": "array",
+     "teams": "array"
+    },
+    "evidence": [
+     "openapi/_original/pagerduty-openapi-original.yml#DELETE /escalation_policies/{id}",
+     "openapi/_original/pagerduty-openapi-original.yml#DELETE /teams/{id}/escalation_policies/{escalation_policy_id}",
+     "openapi/_original/pagerduty-openapi-original.yml#GET /escalation_policies",
+     "openapi/_original/pagerduty-openapi-original.yml#GET /escalation_policies/{id}",
+     "openapi/_original/pagerduty-openapi-original.yml#POST /analytics/metrics/incidents/escalation_policies",
+     "openapi/_original/pagerduty-openapi-original.yml#POST /escalation_policies",
+     "openapi/_original/pagerduty-openapi-original.yml#PUT /escalation_policies/{id}",
+     "openapi/_original/pagerduty-openapi-original.yml#PUT /teams/{id}/escalation_policies/{escalation_policy_id}"
+    ]
+   },
+   "spike-sh": {
+    "segments": [
+     "escalations"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "_id": "string",
+     "name": "string",
+     "escalation": "array",
+     "delay": "string",
+     "createdAt": "string"
+    },
+    "evidence": [
+     "openapi/_original/spike-sh-openapi.yml#GET /escalations",
+     "openapi/_original/spike-sh-openapi.yml#GET /escalations/{escalationId}",
+     "openapi/_original/spike-sh-openapi.yml#GET /on-calls/{oncallId}/escalations"
+    ]
+   },
+   "zenduty": {
+    "segments": [
+     "escalation_policies"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "name": "string",
+     "summary": "string",
+     "description": "string",
+     "rules": "object",
+     "unique_id": "string",
+     "team": "string",
+     "repeat_policy": "integer",
+     "move_to_next": "boolean",
+     "global_ep": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/zenduty-openapi.json#DELETE /api/account/teams/{team_id}/escalation_policies/{escalation_policy_id}/",
+     "openapi/_original/zenduty-openapi.json#GET /api/account/teams/{team_id}/escalation_policies/{escalation_policy_id}/",
+     "openapi/_original/zenduty-openapi.json#GET /api/account/teams/{}/escalation_policies/",
+     "openapi/_original/zenduty-openapi.json#POST /api/account/teams/{}/escalation_policies/",
+     "openapi/_original/zenduty-openapi.json#PUT /api/account/teams/{team_id}/escalation_policies/{escalation_policy_id}/"
+    ]
+   }
+  },
+  "status_page": {
+   "betterstack": {
+    "segments": [
+     "status-pages"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "company_name": "string",
+     "company_url": "string",
+     "contact_url": "string",
+     "logo_url": "string",
+     "timezone": "string",
+     "subdomain": "string",
+     "custom_domain": "string",
+     "announcement": "string",
+     "announcement_embed_visible": "boolean",
+     "history": "integer",
+     "password_enabled": "boolean",
+     "password": "string",
+     "google_analytics_id": "string",
+     "min_incident_length": "integer",
+     "subscribable": "boolean",
+     "hide_from_search_engines": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/betterstack-openapi.yml#DELETE /status-pages/{id}",
+     "openapi/_original/betterstack-openapi.yml#GET /status-pages",
+     "openapi/_original/betterstack-openapi.yml#GET /status-pages/{id}",
+     "openapi/_original/betterstack-openapi.yml#PATCH /status-pages/{id}",
+     "openapi/_original/betterstack-openapi.yml#POST /status-pages"
+    ]
+   },
+   "betteruptime": {
+    "segments": [
+     "status-pages"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "type": "string",
+     "attributes": "object",
+     "company_name": "string",
+     "company_url": "string",
+     "subdomain": "string",
+     "custom_domain": "string",
+     "timezone": "string",
+     "theme": "string",
+     "layout": "string",
+     "subscribable": "boolean",
+     "password_enabled": "boolean",
+     "history": "integer"
+    },
+    "evidence": [
+     "openapi/_original/betteruptime-uptime-api-openapi.yml#DELETE /status-pages/{id}",
+     "openapi/_original/betteruptime-uptime-api-openapi.yml#GET /status-pages",
+     "openapi/_original/betteruptime-uptime-api-openapi.yml#GET /status-pages/{id}",
+     "openapi/_original/betteruptime-uptime-api-openapi.yml#PATCH /status-pages/{id}",
+     "openapi/_original/betteruptime-uptime-api-openapi.yml#POST /status-pages"
+    ]
+   },
+   "checkly": {
+    "segments": [
+     "status-pages"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "length": "integer",
+     "entries": "array",
+     "nextId": "string",
+     "name": "string",
+     "description": "string",
+     "url": "string",
+     "customDomain": "string",
+     "themeColors": "object",
+     "logo": "string",
+     "logoDark": "string",
+     "redirectTo": "string",
+     "favicon": "string",
+     "defaultTheme": "string",
+     "cards": "array",
+     "version": "number",
+     "id": "string",
+     "whiteLabel": "boolean",
+     "isPrivate": "boolean",
+     "projectBindings": "object",
+     "privacyPolicyLink": "string",
+     "termsOfServiceLink": "string",
+     "footerText": "string",
+     "googleAnalyticsTag": "string",
+     "allowIndexing": "boolean",
+     "accountId": "string",
+     "created_at": "string",
+     "updated_at": "string"
+    },
+    "evidence": [
+     "openapi/_original/checkly-public-api-openapi.json#DELETE /v1/status-pages/{statusPageId}",
+     "openapi/_original/checkly-public-api-openapi.json#DELETE /v3/status-pages/{statusPageId}",
+     "openapi/_original/checkly-public-api-openapi.json#GET /v1/status-pages",
+     "openapi/_original/checkly-public-api-openapi.json#GET /v1/status-pages/{statusPageId}",
+     "openapi/_original/checkly-public-api-openapi.json#GET /v3/status-pages",
+     "openapi/_original/checkly-public-api-openapi.json#GET /v3/status-pages/{statusPageId}",
+     "openapi/_original/checkly-public-api-openapi.json#POST /v1/status-pages",
+     "openapi/_original/checkly-public-api-openapi.json#POST /v3/status-pages",
+     "openapi/_original/checkly-public-api-openapi.json#PUT /v1/status-pages/{statusPageId}",
+     "openapi/_original/checkly-public-api-openapi.json#PUT /v3/status-pages/{statusPageId}"
+    ]
+   },
+   "cronitor": {
+    "segments": [
+     "statuspages"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "key": "string",
+     "name": "string",
+     "logo_url": "string",
+     "website_url": "string",
+     "support_url": "string",
+     "allow_search_index": "boolean",
+     "enable_performance_metrics": "boolean",
+     "default_time_period": "string",
+     "enable_dark_mode": "boolean",
+     "hosted_subdomain": "string",
+     "custom_domain": "string",
+     "access": "string",
+     "auth_secret": "string",
+     "ip_allowlist": "string",
+     "components": "string",
+     "components_count": "string",
+     "status": "string",
+     "environment": "string",
+     "metadata": "string",
+     "badge_url_light": "string",
+     "badge_url_dark": "string",
+     "created": "string",
+     "updated": "string",
+     "password": "string"
+    },
+    "evidence": [
+     "openapi/_original/cronitor-openapi.json#DELETE /api/statuspages/{key}",
+     "openapi/_original/cronitor-openapi.json#GET /api/statuspages",
+     "openapi/_original/cronitor-openapi.json#GET /api/statuspages/{key}",
+     "openapi/_original/cronitor-openapi.json#POST /api/statuspages",
+     "openapi/_original/cronitor-openapi.json#PUT /api/statuspages/{key}"
+    ]
+   },
+   "firehydrant": {
+    "segments": [
+     "status_pages",
+     "pages"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "url": "string",
+     "external_id": "string",
+     "name": "string",
+     "display_name": "string",
+     "integration": "object",
+     "integration_slug": "string",
+     "integration_id": "string",
+     "title": "string"
+    },
+    "evidence": [
+     "openapi/_original/firehydrant-api-openapi.yml#DELETE /v1/incidents/{incident_id}/status_pages/{status_page_id}",
+     "openapi/_original/firehydrant-api-openapi.yml#GET /v1/incidents/{incident_id}/status_pages",
+     "openapi/_original/firehydrant-api-openapi.yml#GET /v1/integrations/statuspage/connections/{connection_id}/pages",
+     "openapi/_original/firehydrant-api-openapi.yml#POST /v1/incidents/{incident_id}/status_pages"
+    ]
+   },
+   "ilert": {
+    "segments": [
+     "status-pages"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "number",
+     "name": "string",
+     "domain": "string",
+     "subdomain": "string",
+     "timezone": "string",
+     "faviconUrl": "string",
+     "logoUrl": "string",
+     "visibility": "string",
+     "hiddenFromSearch": "boolean",
+     "showSubscribeAction": "boolean",
+     "showIncidentHistoryOption": "boolean",
+     "pageTitle": "string",
+     "pageDescription": "string",
+     "logoRedirectUrl": "string",
+     "activated": "boolean",
+     "status": "string",
+     "teams": "array",
+     "services": "array",
+     "metrics": "array",
+     "ipWhitelist": "array",
+     "subscribed": "boolean",
+     "announcement": "string",
+     "announcementOnPage": "boolean",
+     "announcementInWidget": "boolean",
+     "audienceSpecific": "boolean",
+     "pageLayout": "string",
+     "structure": "object",
+     "appearance": "string",
+     "groups": "array"
+    },
+    "evidence": [
+     "openapi/_original/ilert-ilert-rest-api-openapi.yml#DELETE /status-pages/{id}",
+     "openapi/_original/ilert-ilert-rest-api-openapi.yml#GET /status-pages",
+     "openapi/_original/ilert-ilert-rest-api-openapi.yml#GET /status-pages/{id}",
+     "openapi/_original/ilert-ilert-rest-api-openapi.yml#POST /status-pages",
+     "openapi/_original/ilert-ilert-rest-api-openapi.yml#PUT /status-pages/{id}"
+    ]
+   },
+   "incident-io": {
+    "segments": [
+     "status_pages"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "pagination_meta": "object",
+     "status_pages": "array",
+     "description": "string",
+     "id": "string",
+     "name": "string",
+     "public_url": "string"
+    },
+    "evidence": [
+     "openapi/_original/incident-io-openapi.json#GET /v2/status_pages",
+     "openapi/_original/incident-io-openapi.json#GET /v2/status_pages/{status_page_id}"
+    ]
+   },
+   "pagerduty": {
+    "segments": [
+     "status_pages"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "offset": "integer",
+     "limit": "integer",
+     "more": "boolean",
+     "total": "integer",
+     "id": "string",
+     "name": "string",
+     "published_at": "string",
+     "status_page_type": "string",
+     "url": "string",
+     "type": "string"
+    },
+    "evidence": [
+     "openapi/_original/pagerduty-openapi-original.yml#GET /status_pages"
+    ]
+   },
+   "phare": {
+    "segments": [
+     "status-pages"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "POST item"
+    ],
+    "properties": {
+     "id": "integer",
+     "project_id": "integer",
+     "is_private": "boolean",
+     "access_password_enabled": "boolean",
+     "access_token_enabled": "boolean",
+     "name": "string",
+     "subdomain": "string",
+     "domain": "string",
+     "title": "string",
+     "description": "string",
+     "search_engine_indexed": "boolean",
+     "website_url": "string",
+     "color_scheme": "string",
+     "theme": "object",
+     "components": "array",
+     "timeframe": "integer",
+     "show_response_times": "boolean",
+     "subscription_channels": "array",
+     "access_ips": "array",
+     "created_at": "string",
+     "updated_at": "string",
+     "logo_light": null,
+     "logo_dark": null,
+     "favicon_light": null,
+     "favicon_dark": null,
+     "access_token": "string",
+     "access_password": "string"
+    },
+    "evidence": [
+     "openapi/_original/phare-openapi.json#DELETE /uptime/status-pages/{statusPageId}",
+     "openapi/_original/phare-openapi.json#GET /uptime/status-pages",
+     "openapi/_original/phare-openapi.json#GET /uptime/status-pages/{statusPageId}",
+     "openapi/_original/phare-openapi.json#POST /uptime/status-pages",
+     "openapi/_original/phare-openapi.json#POST /uptime/status-pages/{statusPageId}"
+    ]
+   },
+   "uptime-com": {
+    "segments": [
+     "statuspages"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "pk": "integer",
+     "name": "string",
+     "company_website": "string",
+     "cname": "string",
+     "allow_subscriptions": "boolean",
+     "is_public": "boolean",
+     "slug": "string",
+     "page_type": "string"
+    },
+    "evidence": [
+     "openapi/_original/uptime-com-openapi.yml#DELETE /statuspages/{pk}/",
+     "openapi/_original/uptime-com-openapi.yml#GET /statuspages/",
+     "openapi/_original/uptime-com-openapi.yml#GET /statuspages/{pk}/",
+     "openapi/_original/uptime-com-openapi.yml#PATCH /statuspages/{pk}/",
+     "openapi/_original/uptime-com-openapi.yml#POST /statuspages/"
+    ]
+   }
+  }
+ },
+ "naming": {
+  "path_segment": {
+   "lower": [
+    "3shake",
+    "aclaimant",
+    "airmdr",
+    "allquiet",
+    "amazon-incident-manager",
+    "antimetal",
+    "at-bay",
+    "betterstack",
+    "betteruptime",
+    "checkly",
+    "chronosphere",
+    "cisco-xdr",
+    "coalition-inc",
+    "cortex-app",
+    "cronitor",
+    "cyware",
+    "demisto",
+    "edge-delta",
+    "elemental-machines",
+    "everbridge",
+    "firehydrant",
+    "formant",
+    "google-cloud-chronicle",
+    "google-cloud-logging",
+    "google-cloud-monitoring",
+    "grafana",
+    "grafana-com",
+    "gremlin",
+    "hookpulse",
+    "hyperdx",
+    "hyperping",
+    "ilert",
+    "incident-io",
+    "ironscales",
+    "keep",
+    "kibana",
+    "levelblue",
+    "lightup",
+    "logicmonitor",
+    "mandiant",
+    "mezmo",
+    "moogsoft",
+    "nagios",
+    "nextron-systems",
+    "openstatus",
+    "opsgenie",
+    "pagerduty",
+    "phare",
+    "prometheus",
+    "prometheus-io",
+    "runwhen",
+    "scale3",
+    "sciencelogic",
+    "secureworks",
+    "servicedesk-plus",
+    "signl4",
+    "signoz",
+    "site24x7",
+    "sophos",
+    "sorry",
+    "spike-sh",
+    "splunk-observability",
+    "spyderbat",
+    "squadcast",
+    "statuspage",
+    "superlog",
+    "swimlane",
+    "taskcall",
+    "tines",
+    "tracebit",
+    "traversal",
+    "uptime-com",
+    "uptimerobot",
+    "zenduty"
+   ],
+   "kebab-case": [
+    "aclaimant",
+    "airmdr",
+    "allquiet",
+    "at-bay",
+    "betterstack",
+    "betteruptime",
+    "checkly",
+    "chronosphere",
+    "cisco-xdr",
+    "cyware",
+    "demisto",
+    "everbridge",
+    "formant",
+    "grafana",
+    "grafana-com",
+    "gremlin",
+    "hookpulse",
+    "hyperdx",
+    "hyperping",
+    "ilert",
+    "incident-io",
+    "ironscales",
+    "keep",
+    "kibana",
+    "logicmonitor",
+    "moogsoft",
+    "opsgenie",
+    "phare",
+    "runwhen",
+    "sciencelogic",
+    "signoz",
+    "spike-sh",
+    "splunk-observability",
+    "spyderbat",
+    "squadcast",
+    "statuspage",
+    "superlog",
+    "swimlane",
+    "taskcall",
+    "tracebit",
+    "uptime-com",
+    "uptimerobot",
+    "zenduty"
+   ],
+   "snake_case": [
+    "airmdr",
+    "antimetal",
+    "cisco-xdr",
+    "cronitor",
+    "cyware",
+    "edge-delta",
+    "elemental-machines",
+    "firehydrant",
+    "incident-io",
+    "keep",
+    "kibana",
+    "mandiant",
+    "moogsoft",
+    "nagios",
+    "openstatus",
+    "pagerduty",
+    "prometheus",
+    "prometheus-io",
+    "scale3",
+    "signoz",
+    "site24x7",
+    "splunk-observability",
+    "spyderbat",
+    "statuspage",
+    "tines",
+    "zenduty"
+   ],
+   "other": [
+    "amazon-incident-manager",
+    "checkly",
+    "chronosphere",
+    "cisco-xdr",
+    "google-cloud-logging",
+    "grafana",
+    "grafana-com",
+    "hookpulse",
+    "kibana",
+    "mandiant",
+    "prometheus",
+    "runwhen",
+    "splunk-observability",
+    "spyderbat",
+    "zabbix"
+   ],
+   "camelCase": [
+    "amazon-incident-manager",
+    "demisto",
+    "everbridge",
+    "google-cloud-chronicle",
+    "google-cloud-monitoring",
+    "grafana",
+    "grafana-com",
+    "gremlin",
+    "incident-io",
+    "logicmonitor",
+    "nextron-systems",
+    "runwhen",
+    "signoz",
+    "splunk-observability"
+   ],
+   "PascalCase": [
+    "everbridge",
+    "firehydrant"
+   ]
+  },
+  "path_param": {
+   "lower": [
+    "aclaimant",
+    "airmdr",
+    "allquiet",
+    "antimetal",
+    "betterstack",
+    "betteruptime",
+    "checkly",
+    "chronosphere",
+    "cisco-xdr",
+    "cortex-app",
+    "cronitor",
+    "cyware",
+    "demisto",
+    "edge-delta",
+    "elemental-machines",
+    "everbridge",
+    "firehydrant",
+    "google-cloud-chronicle",
+    "google-cloud-logging",
+    "grafana",
+    "grafana-com",
+    "gremlin",
+    "hookpulse",
+    "hyperdx",
+    "hyperping",
+    "ilert",
+    "incident-io",
+    "ironscales",
+    "keep",
+    "kibana",
+    "lightup",
+    "logicmonitor",
+    "mandiant",
+    "mezmo",
+    "moogsoft",
+    "openstatus",
+    "opsgenie",
+    "pagerduty",
+    "phare",
+    "prometheus",
+    "prometheus-io",
+    "runwhen",
+    "sciencelogic",
+    "servicedesk-plus",
+    "signoz",
+    "site24x7",
+    "spike-sh",
+    "splunk-observability",
+    "spyderbat",
+    "swimlane",
+    "tines",
+    "tracebit",
+    "uptime-com",
+    "uptimerobot",
+    "zenduty"
+   ],
+   "camelCase": [
+    "3shake",
+    "allquiet",
+    "amazon-incident-manager",
+    "checkly",
+    "cortex-app",
+    "cronitor",
+    "demisto",
+    "everbridge",
+    "google-cloud-chronicle",
+    "google-cloud-logging",
+    "google-cloud-monitoring",
+    "grafana",
+    "grafana-com",
+    "gremlin",
+    "keep",
+    "kibana",
+    "levelblue",
+    "logicmonitor",
+    "mezmo",
+    "moogsoft",
+    "nagios",
+    "opsgenie",
+    "phare",
+    "prometheus",
+    "prometheus-io",
+    "sciencelogic",
+    "signl4",
+    "signoz",
+    "spike-sh",
+    "splunk-observability",
+    "spyderbat",
+    "squadcast",
+    "superlog",
+    "swimlane",
+    "taskcall",
+    "uptimerobot"
+   ],
+   "snake_case": [
+    "airmdr",
+    "at-bay",
+    "chronosphere",
+    "cisco-xdr",
+    "coalition-inc",
+    "cyware",
+    "edge-delta",
+    "elemental-machines",
+    "firehydrant",
+    "grafana",
+    "grafana-com",
+    "hyperping",
+    "incident-io",
+    "ironscales",
+    "keep",
+    "kibana",
+    "lightup",
+    "mandiant",
+    "moogsoft",
+    "pagerduty",
+    "prometheus",
+    "runwhen",
+    "sciencelogic",
+    "servicedesk-plus",
+    "signoz",
+    "site24x7",
+    "sorry",
+    "spike-sh",
+    "splunk-observability",
+    "statuspage",
+    "traversal",
+    "uptime-com",
+    "zenduty"
+   ],
+   "kebab-case": [
+    "aclaimant",
+    "cisco-xdr",
+    "cyware",
+    "everbridge",
+    "gremlin",
+    "ilert"
+   ],
+   "other": [
+    "everbridge",
+    "spike-sh",
+    "spyderbat",
+    "zenduty"
+   ],
+   "PascalCase": [
+    "grafana",
+    "grafana-com",
+    "splunk-observability"
+   ]
+  },
+  "query_param": {
+   "lower": [
+    "3shake",
+    "airmdr",
+    "allquiet",
+    "amazon-incident-manager",
+    "antimetal",
+    "betterstack",
+    "betteruptime",
+    "checkly",
+    "chronosphere",
+    "cisco-xdr",
+    "coalition-inc",
+    "cronitor",
+    "cyware",
+    "edge-delta",
+    "elemental-machines",
+    "everbridge",
+    "firehydrant",
+    "google-cloud-chronicle",
+    "google-cloud-monitoring",
+    "grafana",
+    "grafana-com",
+    "gremlin",
+    "hookpulse",
+    "hyperdx",
+    "ilert",
+    "incident-io",
+    "ironscales",
+    "keep",
+    "kibana",
+    "levelblue",
+    "lightup",
+    "logicmonitor",
+    "mandiant",
+    "mezmo",
+    "moogsoft",
+    "nagios",
+    "nextron-systems",
+    "opsgenie",
+    "pagerduty",
+    "phare",
+    "prometheus",
+    "prometheus-io",
+    "runwhen",
+    "scale3",
+    "sciencelogic",
+    "signoz",
+    "sophos",
+    "sorry",
+    "spike-sh",
+    "splunk-observability",
+    "spyderbat",
+    "squadcast",
+    "superlog",
+    "swimlane",
+    "tines",
+    "tracebit",
+    "traversal",
+    "uptime-com",
+    "uptimerobot",
+    "zenduty"
+   ],
+   "snake_case": [
+    "3shake",
+    "airmdr",
+    "betterstack",
+    "betteruptime",
+    "chronosphere",
+    "cisco-xdr",
+    "coalition-inc",
+    "cronitor",
+    "cyware",
+    "edge-delta",
+    "elemental-machines",
+    "everbridge",
+    "firehydrant",
+    "incident-io",
+    "ironscales",
+    "keep",
+    "kibana",
+    "levelblue",
+    "lightup",
+    "mandiant",
+    "mezmo",
+    "moogsoft",
+    "nagios",
+    "pagerduty",
+    "phare",
+    "prometheus",
+    "prometheus-io",
+    "runwhen",
+    "scale3",
+    "sciencelogic",
+    "signoz",
+    "site24x7",
+    "sophos",
+    "splunk-observability",
+    "spyderbat",
+    "squadcast",
+    "superlog",
+    "tines",
+    "uptime-com",
+    "uptimerobot"
+   ],
+   "camelCase": [
+    "allquiet",
+    "amazon-incident-manager",
+    "antimetal",
+    "checkly",
+    "cronitor",
+    "edge-delta",
+    "everbridge",
+    "firehydrant",
+    "google-cloud-chronicle",
+    "google-cloud-logging",
+    "grafana",
+    "grafana-com",
+    "gremlin",
+    "ironscales",
+    "keep",
+    "kibana",
+    "lightup",
+    "logicmonitor",
+    "mandiant",
+    "mezmo",
+    "moogsoft",
+    "opsgenie",
+    "prometheus-io",
+    "runwhen",
+    "signoz",
+    "spike-sh",
+    "splunk-observability",
+    "spyderbat",
+    "swimlane",
+    "tracebit",
+    "uptimerobot"
+   ],
+   "other": [
+    "chronosphere",
+    "cisco-xdr",
+    "cyware",
+    "elemental-machines",
+    "google-cloud-monitoring",
+    "mandiant",
+    "pagerduty",
+    "prometheus",
+    "prometheus-io",
+    "runwhen",
+    "sciencelogic",
+    "splunk-observability",
+    "spyderbat"
+   ],
+   "PascalCase": [
+    "airmdr",
+    "allquiet",
+    "cyware",
+    "everbridge",
+    "grafana",
+    "grafana-com",
+    "sciencelogic",
+    "signoz"
+   ],
+   "kebab-case": [
+    "cisco-xdr",
+    "ilert",
+    "moogsoft",
+    "runwhen"
+   ]
+  },
+  "pagination_param": {
+   "limit": [
+    "3shake",
+    "airmdr",
+    "allquiet",
+    "antimetal",
+    "checkly",
+    "cisco-xdr",
+    "edge-delta",
+    "elemental-machines",
+    "everbridge",
+    "firehydrant",
+    "grafana",
+    "grafana-com",
+    "gremlin",
+    "hyperdx",
+    "ironscales",
+    "keep",
+    "lightup",
+    "moogsoft",
+    "nextron-systems",
+    "opsgenie",
+    "pagerduty",
+    "prometheus",
+    "prometheus-io",
+    "runwhen",
+    "sciencelogic",
+    "signoz",
+    "sophos",
+    "splunk-observability",
+    "spyderbat",
+    "squadcast",
+    "superlog",
+    "swimlane",
+    "traversal",
+    "uptimerobot"
+   ],
+   "page": [
+    "3shake",
+    "airmdr",
+    "betterstack",
+    "betteruptime",
+    "checkly",
+    "coalition-inc",
+    "cronitor",
+    "cyware",
+    "elemental-machines",
+    "everbridge",
+    "firehydrant",
+    "grafana",
+    "grafana-com",
+    "gremlin",
+    "ironscales",
+    "kibana",
+    "levelblue",
+    "mandiant",
+    "phare",
+    "runwhen",
+    "scale3",
+    "signoz",
+    "sorry",
+    "spike-sh",
+    "splunk-observability",
+    "spyderbat",
+    "tines",
+    "traversal",
+    "uptime-com",
+    "zenduty"
+   ],
+   "offset": [
+    "airmdr",
+    "allquiet",
+    "cisco-xdr",
+    "edge-delta",
+    "gremlin",
+    "hyperdx",
+    "keep",
+    "lightup",
+    "logicmonitor",
+    "moogsoft",
+    "opsgenie",
+    "pagerduty",
+    "runwhen",
+    "sciencelogic",
+    "signoz",
+    "splunk-observability",
+    "squadcast"
+   ],
+   "start": [
+    "allquiet",
+    "cisco-xdr",
+    "everbridge",
+    "grafana",
+    "grafana-com",
+    "gremlin",
+    "kibana",
+    "logicmonitor",
+    "mandiant",
+    "moogsoft",
+    "prometheus",
+    "prometheus-io",
+    "signoz",
+    "spike-sh",
+    "splunk-observability",
+    "spyderbat",
+    "uptimerobot"
+   ],
+   "page_size": [
+    "airmdr",
+    "coalition-inc",
+    "cronitor",
+    "cyware",
+    "everbridge",
+    "google-cloud-chronicle",
+    "google-cloud-logging",
+    "gremlin",
+    "incident-io",
+    "ironscales",
+    "kibana",
+    "mandiant",
+    "runwhen",
+    "scale3",
+    "spyderbat",
+    "uptime-com"
+   ],
+   "per_page": [
+    "betterstack",
+    "elemental-machines",
+    "firehydrant",
+    "grafana",
+    "grafana-com",
+    "gremlin",
+    "kibana",
+    "phare",
+    "signoz",
+    "spike-sh",
+    "splunk-observability",
+    "tines"
+   ],
+   "cursor": [
+    "allquiet",
+    "edge-delta",
+    "ilert",
+    "kibana",
+    "logicmonitor",
+    "pagerduty",
+    "signoz",
+    "sophos",
+    "uptimerobot"
+   ],
+   "size": [
+    "airmdr",
+    "everbridge",
+    "kibana",
+    "levelblue",
+    "logicmonitor",
+    "mandiant",
+    "mezmo",
+    "swimlane"
+   ],
+   "page_token": [
+    "chronosphere",
+    "google-cloud-chronicle",
+    "google-cloud-logging",
+    "gremlin",
+    "mandiant"
+   ],
+   "max_results": [
+    "amazon-incident-manager",
+    "gremlin",
+    "ilert",
+    "moogsoft"
+   ],
+   "after": [
+    "firehydrant",
+    "incident-io",
+    "pagerduty"
+   ],
+   "before": [
+    "firehydrant",
+    "pagerduty"
+   ],
+   "starting_after": [
+    "antimetal"
+   ],
+   "top": [
+    "everbridge"
+   ],
+   "count": [
+    "firehydrant"
+   ],
+   "skip": [
+    "moogsoft"
+   ],
+   "next": [
+    "runwhen"
+   ]
+  },
+  "property": {
+   "lower": [
+    "aclaimant",
+    "airmdr",
+    "allquiet",
+    "betterstack",
+    "betteruptime",
+    "checkly",
+    "chronosphere",
+    "cisco-xdr",
+    "cronitor",
+    "demisto",
+    "everbridge",
+    "firehydrant",
+    "gremlin",
+    "hyperping",
+    "ilert",
+    "incident-io",
+    "keep",
+    "kibana",
+    "lightup",
+    "moogsoft",
+    "nagios",
+    "openstatus",
+    "opsgenie",
+    "pagerduty",
+    "phare",
+    "sciencelogic",
+    "signoz",
+    "sorry",
+    "spike-sh",
+    "splunk-observability",
+    "uptime-com",
+    "uptimerobot",
+    "zenduty"
+   ],
+   "snake_case": [
+    "airmdr",
+    "betterstack",
+    "betteruptime",
+    "checkly",
+    "chronosphere",
+    "cisco-xdr",
+    "cronitor",
+    "firehydrant",
+    "hyperping",
+    "incident-io",
+    "keep",
+    "kibana",
+    "lightup",
+    "moogsoft",
+    "pagerduty",
+    "phare",
+    "sorry",
+    "uptime-com",
+    "zenduty"
+   ],
+   "camelCase": [
+    "allquiet",
+    "checkly",
+    "cisco-xdr",
+    "demisto",
+    "everbridge",
+    "gremlin",
+    "ilert",
+    "openstatus",
+    "opsgenie",
+    "signoz",
+    "spike-sh",
+    "splunk-observability",
+    "uptimerobot"
+   ],
+   "other": [
+    "cyware",
+    "spike-sh",
+    "zenduty"
+   ],
+   "PascalCase": [
+    "demisto",
+    "sciencelogic"
+   ],
+   "kebab-case": [
+    "aclaimant"
+   ]
+  }
+ }
+}

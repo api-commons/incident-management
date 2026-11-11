@@ -1,0 +1,40 @@
+provider: betterstack
+apis_io: https://apis.io/providers/betterstack/
+context: incident-management
+generated: '2026-11-10'
+concepts:
+  incident:
+    path_segment:
+    - incidents
+    properties:
+      name: summary
+      description: description
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/betterstack-openapi.yml#DELETE /incidents/{id}
+    - openapi/_original/betterstack-openapi.yml#GET /incidents
+    - openapi/_original/betterstack-openapi.yml#GET /incidents/{id}
+    - openapi/_original/betterstack-openapi.yml#POST /incidents
+  incident_update:
+    path_segment:
+    - timeline
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/betterstack-openapi.yml#GET /incidents/{id}/timeline
+  status_page:
+    path_segment:
+    - status-pages
+    properties:
+      subdomain:
+      - subdomain
+      - custom_domain
+      logo_url: logo_url
+      timezone: timezone
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/betterstack-openapi.yml#DELETE /status-pages/{id}
+    - openapi/_original/betterstack-openapi.yml#GET /status-pages
+    - openapi/_original/betterstack-openapi.yml#GET /status-pages/{id}
+    - openapi/_original/betterstack-openapi.yml#PATCH /status-pages/{id}
+    - openapi/_original/betterstack-openapi.yml#POST /status-pages

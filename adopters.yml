@@ -1,0 +1,191 @@
+context: incident-management
+generated: '2026-11-10'
+adopters:
+- provider: aclaimant
+  apis_io: https://apis.io/providers/aclaimant/
+  crosswalk: crosswalk/aclaimant.yml
+  concepts:
+  - incident
+- provider: allquiet
+  apis_io: https://apis.io/providers/allquiet/
+  crosswalk: crosswalk/allquiet.yml
+  concepts:
+  - incident
+  - service
+- provider: betterstack
+  apis_io: https://apis.io/providers/betterstack/
+  crosswalk: crosswalk/betterstack.yml
+  concepts:
+  - incident
+  - incident_update
+  - status_page
+- provider: betteruptime
+  apis_io: https://apis.io/providers/betteruptime/
+  crosswalk: crosswalk/betteruptime.yml
+  concepts:
+  - incident
+  - status_page
+- provider: checkly
+  apis_io: https://apis.io/providers/checkly/
+  crosswalk: crosswalk/checkly.yml
+  concepts:
+  - incident
+  - incident_update
+  - service
+  - status_page
+- provider: cisco-xdr
+  apis_io: https://apis.io/providers/cisco-xdr/
+  crosswalk: crosswalk/cisco-xdr.yml
+  concepts:
+  - incident
+  - incident_update
+  - on_call_schedule
+- provider: cronitor
+  apis_io: https://apis.io/providers/cronitor/
+  crosswalk: crosswalk/cronitor.yml
+  concepts:
+  - status_page
+- provider: demisto
+  apis_io: https://apis.io/providers/demisto/
+  crosswalk: crosswalk/demisto.yml
+  concepts:
+  - incident
+- provider: everbridge
+  apis_io: https://apis.io/providers/everbridge/
+  crosswalk: crosswalk/everbridge.yml
+  concepts:
+  - incident
+  - on_call_schedule
+- provider: firehydrant
+  apis_io: https://apis.io/providers/firehydrant/
+  crosswalk: crosswalk/firehydrant.yml
+  concepts:
+  - escalation_policy
+  - incident
+  - incident_update
+  - on_call_schedule
+  - service
+  - status_page
+- provider: gremlin
+  apis_io: https://apis.io/providers/gremlin/
+  crosswalk: crosswalk/gremlin.yml
+  concepts:
+  - incident
+  - on_call_schedule
+  - service
+- provider: hyperping
+  apis_io: https://apis.io/providers/hyperping/
+  crosswalk: crosswalk/hyperping.yml
+  concepts:
+  - incident
+  - incident_update
+- provider: ilert
+  apis_io: https://apis.io/providers/ilert/
+  crosswalk: crosswalk/ilert.yml
+  concepts:
+  - escalation_policy
+  - incident
+  - on_call_schedule
+  - service
+  - status_page
+- provider: incident-io
+  apis_io: https://apis.io/providers/incident-io/
+  crosswalk: crosswalk/incident-io.yml
+  concepts:
+  - escalation_policy
+  - incident
+  - incident_update
+  - on_call_schedule
+  - status_page
+- provider: keep
+  apis_io: https://apis.io/providers/keep/
+  crosswalk: crosswalk/keep.yml
+  concepts:
+  - incident
+- provider: lightup
+  apis_io: https://apis.io/providers/lightup/
+  crosswalk: crosswalk/lightup.yml
+  concepts:
+  - incident
+- provider: moogsoft
+  apis_io: https://apis.io/providers/moogsoft/
+  crosswalk: crosswalk/moogsoft.yml
+  concepts:
+  - incident
+  - on_call_schedule
+- provider: openstatus
+  apis_io: https://apis.io/providers/openstatus/
+  crosswalk: crosswalk/openstatus.yml
+  concepts:
+  - incident
+- provider: opsgenie
+  apis_io: https://apis.io/providers/opsgenie/
+  crosswalk: crosswalk/opsgenie.yml
+  concepts:
+  - escalation_policy
+  - incident
+  - on_call_schedule
+  - service
+- provider: pagerduty
+  apis_io: https://apis.io/providers/pagerduty/
+  crosswalk: crosswalk/pagerduty.yml
+  concepts:
+  - escalation_policy
+  - incident
+  - incident_update
+  - on_call_schedule
+  - service
+  - status_page
+- provider: phare
+  apis_io: https://apis.io/providers/phare/
+  crosswalk: crosswalk/phare.yml
+  concepts:
+  - incident
+  - incident_update
+  - status_page
+- provider: spike-sh
+  apis_io: https://apis.io/providers/spike-sh/
+  crosswalk: crosswalk/spike-sh.yml
+  concepts:
+  - escalation_policy
+  - incident
+  - on_call_schedule
+  - service
+- provider: splunk-observability
+  apis_io: https://apis.io/providers/splunk-observability/
+  crosswalk: crosswalk/splunk-observability.yml
+  concepts:
+  - incident
+- provider: squadcast
+  apis_io: https://apis.io/providers/squadcast/
+  crosswalk: crosswalk/squadcast.yml
+  concepts:
+  - incident
+  - incident_update
+- provider: statuspage
+  apis_io: https://apis.io/providers/statuspage/
+  crosswalk: crosswalk/statuspage.yml
+  concepts:
+  - incident
+  - incident_update
+  - service
+- provider: uptime-com
+  apis_io: https://apis.io/providers/uptime-com/
+  crosswalk: crosswalk/uptime-com.yml
+  concepts:
+  - incident
+  - service
+  - status_page
+- provider: uptimerobot
+  apis_io: https://apis.io/providers/uptimerobot/
+  crosswalk: crosswalk/uptimerobot.yml
+  concepts:
+  - incident
+- provider: zenduty
+  apis_io: https://apis.io/providers/zenduty/
+  crosswalk: crosswalk/zenduty.yml
+  concepts:
+  - escalation_policy
+  - incident
+  - on_call_schedule
+  - service
